@@ -4,6 +4,7 @@ template: reference.hbs
 columns: three
 order: 1
 ---
+# Authentication Overview  
 
 The Fresh Vine API allows for 3 different approaches to authentication. Each has their own place, and once one is selected for your application it cannot be changed. If it comes to a point where you need a new approach you would need to create a new application.
 

@@ -4,7 +4,7 @@ template: reference.hbs
 columns: three
 order: 7
 ---
-  
+# Using a Token  
   
 Tokens expire after a specific length of time. When using a token you must supply the following variables.
   

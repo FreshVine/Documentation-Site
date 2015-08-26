@@ -4,6 +4,8 @@ template: reference.hbs
 columns: three
 order: 6
 ---
+# Using a Key  
+
 Every key is connected to three things; your application, a Fresh Vine customer (organization), and a Fresh Vine user. 
 
 Using a key is involves including three pieces of information when making a request.  

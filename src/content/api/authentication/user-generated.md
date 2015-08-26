@@ -4,6 +4,8 @@ template: reference.hbs
 columns: three
 order: 4
 ---
+# Auth Approach: User Generated Key  
+
 Users can generate a persistant key for your application to use. This is often the prefered approach for custom software, and plug-in development. The use simply logs into their account and generates a key that they can then send to you.  
   
 
@@ -11,7 +13,7 @@ Users can generate a persistant key for your application to use. This is often t
 All the user needs to do is navigate to their 'My Apps' page and then click on the 'New Key' button. Once the key has been generated you have 10 days to register the key. This is the only time limitation placed on keys and is designed to keep keys that were lost from being used maliciously.  
 
 ## Register the Key  
-This key is 95% ready to go, all you need to do is quickly register that key for your application.   
+This key is 95% ready to go, all you need to do is quickly register that key for your application.  
 
 
 **Register the Key**  
@@ -39,7 +41,6 @@ A successful registration will return a similar structured response.
 ```
 
 ## Scope Limits  
-The scope is not verified until your first request after registration. This is due to a limitation on how the fresh vine API is structured.  
+The scope is not verified until your first request after registration. This is due to a limitation on how the fresh vine API is structured. It is possible that the registration will fail if the user does not have suffient privledges required for your application.  
 
 ## Possible Issues
-

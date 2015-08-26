@@ -4,6 +4,8 @@ template: reference.hbs
 columns: three
 order: 3
 ---
+# Auth Approach: Dialog Modal  
+
 Dialog Modals (generally used with oAuth) is a obiquitious approach to API authenticaion. We have a complete oAuth/dialog workflow that you can use with your application. This approach does not require the user to leave your platform to enter data into Fresh Vine or generate a key - instead it relies on a modal window that you can often integrate into your application.  
   
 **Ease of use for the User**  

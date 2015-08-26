@@ -4,8 +4,9 @@ template: reference.hbs
 columns: three
 order: 2
 ---
+# Auth Approach: Device Flow  
 
-This approach is best used when your application cannot use the oAuth2 dialog approach. This will likely be due to these two issues:
+This approach is best used when your application cannot use the oAuth2 dialog approach, or does not allow for the easy entry of a user generated key. This will likely be due to these two issues:
 
 * **Cross Site Scripting (XSS):**  
 Same origin policy should block access to the content of the dialog window when not able to use a redirect URI.
@@ -228,3 +229,7 @@ The `device_code` and `user_code` are no longer active.
 
 ### Step 5: Make Requests of Fresh Vine API<a name="step5"></a>
 Once you're device_code has been tokenized you are free to use the API to make your requests. Ensure that you manage your tokens correctly. If you're tokens are ever both expired, or rejected you will need to re-authenicate. For those of you using a key - this is not an issue for you. 
+
+## freshvine-api.js  
+
+If you are interested in how you might go about implementing a device flow check out our public project freshvine-api.js. Not only does it have a javascript based approach to using the API, but also has built in device flow support.
