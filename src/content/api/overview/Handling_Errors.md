@@ -1,0 +1,1 @@
+Error's are sent back in a normal structure to make it easier for you to catch and process.
