@@ -5,14 +5,12 @@
         <i class="ion-navicon" title="show/hide the navigation"></i>
       </a>
     </div>
-    <a href="https://www.particle.io">
+    <a href="https://docs.freshvine.co">
       <img src="/assets/images/particle-docs.png" id="logo">
     </a>
     <div class="sections">
       <a class="nav {{#contains path.href 'guide'}}active{{/contains}}" href="/guide">Guide</a>
-      <a class="nav {{#contains path.href 'reference'}}active{{/contains}}" href="/reference">Reference</a>
-      <a class="nav {{#contains path.href 'datasheets'}}active{{/contains}}" href="/datasheets">Datasheets</a>
-      <a class="nav {{#contains path.href 'support'}}active{{/contains}}" href="/support">Support</a>
+      <a class="nav {{#contains path.href 'reference'}}active{{/contains}}" href="/api">API</a>
     </div>
     <div class="dropdown mobile-only">
       <a id="dLabel" data-target="#" class="nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -21,9 +19,7 @@
       </a>
       <ul class="dropdown-menu" aria-labelledby="dLabel">
         <li><a href="/guide">Guide</a></li>
-        <li><a href="/reference">Reference</a></li>
-        <li><a href="/datasheets">Datasheets</a></li>
-        <li><a href="/support">Support</a></li>
+        <li><a href="/api">API</a></li>
       </ul>
     </div>
     <div class="search">
@@ -36,22 +32,6 @@
     </div>
   </div>
   <div class='right'>
-    {{#if devices}}
-      <div class="dropdown">
-        <a id="dLabel" data-target="#" class="nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <i class="im-devices-icon"></i>
-          {{#if photon}}
-            Photon
-          {{else}}
-            Core
-          {{/if}}
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dLabel">
-          <li><a href="{{path.href}}{{path.name}}/photon/">Photon</a></li>
-          <li><a href="{{path.href}}{{path.name}}/core/">Core</a></li>
-        </ul>
-      </div>
-    {{/if}}
     <a href='https://www.github.com/spark/docs/tree/{{branch}}/src/content/{{path.href}}{{path.name}}.md' class="nav" target="_blank"><i class="ion-edit"></i>Edit</a>
   </div>
 </div>
