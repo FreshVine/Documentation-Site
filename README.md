@@ -1,9 +1,9 @@
-## Particle Documentation [![Build Status](https://travis-ci.org/spark/docs.svg?branch=feature/server-side-rendering)](https://travis-ci.org/spark/docs)
+# Fresh Vine Documentation
 =======
 
-Here you'll find the documentation for the Particle platform, including the Particle Cloud, Photon, and Spark Core.
+Here you'll find the documentation for the Fresh Vine platforms, including the Leadership Site, Portal, Concierge, Event Kiosk, and API.
 
-To view this documentation, visit [our website](http://docs.particle.io), where the documentation is hosted.
+To view this documentation, visit [our website](http://docs.freshvine.co), where the documentation is hosted.
 
 **Note**: This is a new public repository as of May 18, 2015. All
 outstanding pull requests from the old docs repository have been closed.
