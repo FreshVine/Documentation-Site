@@ -1,6 +1,6 @@
 ---
 title: Get started with Fresh Vine
-template: start.hbs
+template: guide.hbs
 ---
 
 <h1 class="choose-device-header">Which device are you interested in?</h1>
