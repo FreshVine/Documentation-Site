@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="{{columns}}-columns">
 <head>
-  {{> head sectionTitle='Reference Documentation'}}
+  {{> head sectionTitle='Developer Docs'}}
 </head>
 <body role='flatdoc'>
   <div id="docs" data-level>
@@ -11,7 +11,7 @@
       <div class='menubar'>
 
       <ul class="nav reference">
-        {{#each reference}}
+        {{#each developers}}
             <ul>
               <li class="top-level {{#page-equal ../path.href ../path.name path.href path.name}}active{{/page-equal}}">
                 {{#page-equal ../path.href ../path.name path.href path.name}}
