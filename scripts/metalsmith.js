@@ -15,12 +15,12 @@ var partials = require('metalsmith-register-partials');
 var helpers = require('metalsmith-register-helpers');
 var redirect = require('metalsmith-redirect');
 var copy = require('metalsmith-copy');
-var fork = require('./fork');
+// var fork = require('./fork');
 var inPlace = require('metalsmith-in-place');
 var watch = require('metalsmith-watch');
 var autotoc = require('metalsmith-autotoc');
-var lunr = require('metalsmith-lunr');
-var lunr_ = require('lunr');
+// var lunr = require('metalsmith-lunr');
+// var lunr_ = require('lunr');
 var fileMetadata = require('metalsmith-filemetadata');
 var msIf = require('metalsmith-if');
 var precompile = require('./precompile');
@@ -43,7 +43,7 @@ var gitBranch;
 
 exports.metalsmith = function() {
   var _removeEmptyTokens = function removeEmptyTokens(token) {
-    if (token.length > 0) {return token};
+    if (token.length > 0) {return token;}
   };
   var metalsmith = Metalsmith(__dirname)
     .concurrency(100)
@@ -99,26 +99,18 @@ exports.metalsmith = function() {
         sortBy: 'order',
         orderDynamicCollections: [
           'getting-started',
-          'tools-and-features',
-          'how-to-build-a-product'
+          'applications',
+          'modules'
         ]
       },
-      reference: {
-        pattern: 'reference/*md',
-        sortBy: 'order'
-      },
-      datasheet: {
-        pattern: 'datasheets/*.md',
-        sortBy: 'order'
-      },
-      support: {
-        pattern: 'support/*.md',
-        sortBy: 'order'
+      developers: {
+        pattern: 'developers/:section/*md',
+        sortBy: 'order',
+        orderDynamicCollections: [
+          'overview',
+          'authentication'
+        ]
       }
-    }))
-    .use(fork({
-      key: 'devices',
-      redirectTemplate: './templates/redirector.jade'
     }))
     .use(inPlace({
       engine: 'jade',
@@ -138,16 +130,16 @@ exports.metalsmith = function() {
       selector: 'h2, h3',
       pattern: '**/**/*.md'
     }))
-    .use(lunr({
-      indexPath: 'search-index.json',
-      fields: {
-        contents: 1,
-        title: 10
-      },
-      pipelineFunctions: [
-        _removeEmptyTokens
-      ]
-    }))
+    // .use(lunr({
+    //   indexPath: 'search-index.json',
+    //   fields: {
+    //     contents: 1,
+    //     title: 10
+    //   },
+    //   pipelineFunctions: [
+    //     _removeEmptyTokens
+    //   ]
+    // }))
     .use(templates({
       engine: 'handlebars',
       directory: '../templates'
@@ -156,74 +148,10 @@ exports.metalsmith = function() {
       relative: false
     }))
     .use(redirect({
-      '/start': '/',
-      '/guide': '/guide/getting-started/intro',
-      '/guide/photon/': '/guide/photon/start',
-      '/guide/core/': '/guide/core/start',
-      '/reference': '/reference/firmware',
-      '/datasheets': '/datasheets/kits/photon/',
-      '/guide/getting-started': '/guide/getting-started/intro',
-      '/guide/how-to-build-a-product': '/guide/how-to-build-a-product/intro/',
-      '/guide/tools-and-features': '/guide/tools-and-features/intro',
-      '/support': '/support/shipping-account-info',
-      "/photon" : "/",
-      "/photon/start" : "/guide/getting-started/start",
-      "/photon/connect" : "/guide/getting-started/connect",
-      "/photon/modes" : "/guide/getting-started/modes",
-      "/photon/tinker" : "/guide/getting-started/tinker",
-      "/photon/examples" : "/guide/getting-started/examples",
-      "/photon/dev" : "/guide/tools-and-features/dev",
-      "/photon/dashboard" : "/guide/tools-and-features/dashboard",
-      "/photon/firmware" : "/reference/firmware",
-      "/photon/api" : "/reference/api",
-      "/photon/javascript" : "/reference/javascript",
-      "/photon/ios" : "/reference/ios",
-      "/photon/photon-datasheet" : "/datasheets/photon-datasheet",
-      "/photon/p1-datasheet" : "/datasheets/p1-datasheet",
-      "/photon/shields" : "/reference/shields",
-      "/photon/cli" : "/reference/cli",
-      "/photon/ifttt" : "/guide/tools-and-features/ifttt",
-      "/photon/webhooks" : "/guide/tools-and-features/webhooks",
-      "/photon/hackathon" : "/guide/tools-and-features/hackathon",
-      "/core" : "/guide/getting-started/intro/core",
-      "/core/start" : "/guide/getting-started/start/core",
-      "/core/connect" : "/guide/getting-started/connect/core",
-      "/core/modes" : "/guide/getting-started/modes/core",
-      "/core/tinker" : "/guide/getting-started/tinker/core",
-      "/core/examples" : "/guide/getting-started/examples/core",
-      "/core/dev" : "/guide/tools-and-features/dev/core",
-      "/core/dashboard" : "/guide/tools-and-features/dashboard/core",
-      "/core/firmware" : "/reference/firmware",
-      "/core/api" : "/reference/api",
-      "/core/javascript" : "/reference/javascript",
-      "/core/ios" : "/reference/ios",
-      "/core/hardware" : "/datasheets/core-datasheet",
-      "/core/shields" : "/reference/shields",
-      "/core/cli" : "/reference/cli",
-      "/core/ifttt" : "/guide/tools-and-features/ifttt/core",
-      "/core/webhooks" : "/guide/tools-and-features/webhooks/core",
-      "/core/hackathon" : "/guide/tools-and-features/hackathon/core",
-      "/firmware" : "/reference/firmware",
-      "/api" : "/reference/api",
-      "/cli" : "/reference/cli",
-      "/javascript" : "/reference/javascript",
-      "/ios" : "/reference/ios",
-      "/start" : "/guide/getting-started/start",
-      "/connect" : "/guide/getting-started/connect",
-      "/modes" : "/guide/getting-started/modes",
-      "/tinker" : "/guide/getting-started/tinker",
-      "/build" : "/guide/getting-started/build",
-      "/examples" : "/guide/getting-started/examples",
-      "/dev" : "/guide/tools-and-features/dev",
-      "/dashboard" : "/guide/tools-and-features/dashboard",
-      "/cli" : "/guide/tools-and-features/cli",
-      "/monitor" : "/guide/tools-and-features/monitor",
-      "/ifttt" : "/guide/tools-and-features/ifttt",
-      "/webhooks" : "/guide/tools-and-features/webhooks",
-      "/hackathon" : "/guide/tools-and-features/hackathon",
-      "/photon-datasheet" : "/datasheets/photon-datasheet",
-      "/p1-datasheet" : "/datasheets/p1-datasheet",
-      "/hardware" : "/datasheets/core-datasheet"
+      '/developers': '/developers/overview',
+      '/developers/authentication': '/developers/authentication/overview',
+      '/guide': '/guide/getting-started/overview',
+      '/guide/getting-started': '/guide/getting-started/overview'
     }))
     .use(msIf(
       environment !== 'development',
@@ -257,8 +185,6 @@ exports.server = function(callback) {
           "${source}/assets/less/*.less": "assets/less/*.less",
           "../templates/reference.hbs": "content/reference/*.md",
           "../templates/guide.hbs": "content/guide/**/*.md",
-          "../templates/datasheet.hbs": "content/datasheets/*.md",
-          "../templates/support.hbs": "content/support/*.md",
           "${source}/assets/js/*.js" : true
         },
         livereload: true
