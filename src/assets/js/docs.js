@@ -348,7 +348,7 @@ Created by Zach Supalla.
   Docs.scrollNavOnload = function(){	// Scroll the side menu to the current value
 	  if( $('.menubar').is('.menu-visible')){
 		  $('.menubar').animate({
-	          scrollTop: $(".top-level.active").offset().top - $('.header').height()
+	          scrollTop: $(".top-level.active").offset().top - $('.header').height() - 50
 	      }, 0);
 	  }
   }
