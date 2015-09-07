@@ -1,6 +1,6 @@
 ---
 title: API Overview
-template: api.hbs
+template: reference.hbs
 columns: two
 order: 2
 ---

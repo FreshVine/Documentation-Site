@@ -1,5 +1,5 @@
 ---
-title: Approach: Dialog Modal 
+title: Approach - Dialog Modal 
 template: reference.hbs
 columns: three
 order: 3
@@ -17,7 +17,7 @@ Fresh Vine covers a lot of ground and users have access to different parts of th
   
 ## Authentication Flow
 
-### Step 1: Launch the Modal<a name="step1"></a>  
+### Step 1) Launch the Modal
 If you do not have a valid tokens you need to start the process by requesting a device code. The only 1 is required `client_id`:  
   
 * **client_id**  

@@ -1,5 +1,5 @@
 ---
-title: Approach: Device Flow 
+title: Approach - Device Flow 
 template: reference.hbs
 columns: three
 order: 2
@@ -17,7 +17,7 @@ Text input may be difficult for the user. In this case it may be easier for the 
   
 ## Authentication Flow
 
-### Step 1: Request Device Code<a name="step1"></a>  
+### Step 1) Request Device Code  
 If you do not have a valid tokens you need to start the process by requesting a device code. The only 1 is required `client_id`:  
   
 * **FVappid**  
@@ -79,7 +79,7 @@ Provided as a reminder of the state supplied during your request.
 }
 ```
 
-### Step 2: Display Code to User & Authorizes your App<a name="step2"></a>  
+### Step 2) Display Code to User & Authorizes your App  
 
 Once the response is received it is time to display the `user_code`. While the user is entering the code, you will need to begin polling for a response  - [see step 4](#step4).  
   
@@ -91,7 +91,7 @@ Enter the code into Fresh Vine
 432 324
 
   
-### Step 3: User enters code into Fresh Vine<a name="step3"></a>  
+### Step 3) User enters code into Fresh Vine  
 This step is for the user while you poll.  The user must:  
 
 1. Log into their Fresh Vine account  
@@ -100,7 +100,7 @@ This step is for the user while you poll.  The user must:
   
 The polling response will let you know when the status of your device_code is altered.  
 
-### Step 4: Polling for App Authentication<a name="step4"></a>
+### Step 4) Polling for App Authentication  
 This is the phase when you will be checking for changes to your `device_code` based on the activity the user is performing. In the initial code request - [see step 1](#step1) - you were given an `interval` that represents the number of seconds between polling requests.  
   
 Checking for changes to your device code will let your application understand what is happening and how to proceed.  
@@ -132,7 +132,7 @@ https://api.freshvine.co/auth/key/device/polling?
     &device_code=YOUR_DEVICE_CODE
 ```
   
-#### Responses  
+#### Possible Responses  
 There are 6 possible responses. Each details the current state of the authenitcation process. All responses receive a response code of 400, except for Accepted (which is 200).
 
 ##### Authorization Pending  
@@ -227,7 +227,7 @@ The `device_code` and `user_code` are no longer active.
 }
 ```
 
-### Step 5: Make Requests of Fresh Vine API<a name="step5"></a>
+### Step 5) Make Requests of Fresh Vine API
 Once you're device_code has been tokenized you are free to use the API to make your requests. Ensure that you manage your tokens correctly. If you're tokens are ever both expired, or rejected you will need to re-authenicate. For those of you using a key - this is not an issue for you. 
 
 ## freshvine-api.js  

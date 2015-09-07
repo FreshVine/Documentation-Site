@@ -1,7 +1,7 @@
 ---
 title: HTTP Status Codes 
 template: reference.hbs
-columns: three
+columns: two
 order: 3
 ---
 # API HTTP Response Status Codes  

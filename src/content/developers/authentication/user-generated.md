@@ -1,5 +1,5 @@
 ---
-title: Approach: User Generated Key 
+title: Approach - User Generated Key 
 template: reference.hbs
 columns: three
 order: 4

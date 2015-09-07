@@ -1,7 +1,7 @@
 ---
 title: Introduction
 template: reference.hbs
-columns: three
+columns: two
 order: 1
 ---
 # Authentication Overview  
