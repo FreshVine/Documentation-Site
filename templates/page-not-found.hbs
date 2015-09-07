@@ -1,12 +1,31 @@
 <!doctype html>
-<html>
+<html class="error404">
 <head>
-  {{> head sectionTitle='Page Not Found'}}
+  {{> head sectionTitle=''}}
 </head>
 <body>
-  <div id="docs" data-level>
-    {{{contents}}}
+	<div id="docs" data-level>
+		{{> header}}
+
+
+		<div class="content-root start-page">
+			<div class="page">
+				<div class='content-inner'>
+					<div class='content-wrap'>
+						<div class="vCenterParent" style="height: 500px;">
+							<div class="vCenter">
+								<h1>{{plaidTitle}}</h1>
+								<div class="content">{{{contents}}}</div>
+							</div>
+						</div>
+				    {{> footer}}
+					</div>
+		        </div>
+			</div>
+		</div>
+	</div>
+
     {{> scripts}}
-  </div>
 </body>
 </html>
+
