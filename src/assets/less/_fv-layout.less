@@ -195,6 +195,22 @@ body .dropdown-menu{
 }
 h3.guide-section-titles{
 	color: #404140;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+body .menubar ol{
+    padding-left: 5px;
+}
+body .menubar ul.in-page-toc{
+    margin-top: 0;
+    padding-left: 5px;
+}
+
+.menubar li.active-section{
+	overflow-x: visible;
+}
+.menubar li.active span{
+	color: #404140;
 }
 .menubar li a:hover,
 .menubar li a:visited:hover,
@@ -202,8 +218,18 @@ ul.in-page-toc li.active a{
 	color: #31C0EF;	// FV Blue
 }
 .menubar li.active.top-level{
+    margin: 0 -20px 0 -25px;
+}
+.menubar ul li.active-section li.top-level
+.menubar ul li.active-section li.top-level.active{
+	margin: 0 0 0 -25px;
+    padding-left: 25px;
+    width: 100%;
+}
+.menubar ul li.active-section li.active.top-level {
 	background-color: #F2F2F2;
 	color: #404140;
+	padding-left: 25px;
 }
 
 body .header .search{
