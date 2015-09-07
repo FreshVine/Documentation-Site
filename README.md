@@ -5,10 +5,6 @@ Here you'll find the documentation for the Fresh Vine platforms, including the L
 
 To view this documentation, visit [our website](http://docs.freshvine.co), where the documentation is hosted.
 
-**Note**: This is a new public repository as of May 18, 2015. All
-outstanding pull requests from the old docs repository have been closed.
-Please re-open them in this repo.
-
 ### Installation
 
 To host this documentation locally, you'll need Node.js and npm:
@@ -38,13 +34,9 @@ repository. This will tell you whether the build will pass on Travis or
 not.
 
 ### Deployment
-
-When updated documentation is pushed to the master branch, it is automatically pushed to Amazon S3 by Travis CI.
-
-TODO: FURTHER INSTRUCTIONS FOR DEPLOYMENT
-
-To see the latest build, visit the [Travis CI page](https://travis-ci.org/spark/docs).
-
+  
+  
+  
 ### Organization
 
 The majority of the content herein is stored in the `src/content/en` directory as a set of Markdown files. Assets such as images and javascript are stored in the `src/assets` directory.
@@ -80,29 +72,6 @@ The docs dynamically generate a table of contents for navigation purposes based 
 
 Note that there are only 2 levels of navigation that will appear in the table of contents. *`h4`s and below will not appear in the table of contents*.
 
-### Device Specific Content
-
-If you are working on a page that has device-specific content, the
-first thing you need to do is add the relevant device names to the
-front-matter of the MD file, like this:
-
-```
-devices: ['photon', 'core']
-```
-Where Photon and Core are the relevant devices to this page. Then, in
-the body of the page, you can specify device-specific content by
-using a special helper, like this:
-
-```
-{{#if photon}}
-  PHOTON SPECIFIC STUFFZ
-{{/if}}
-
-{{#if core}}
-  CORE SPECIFIC STUFFZ
-{{/if}}
-```
-
 ### Tests
 
 To run the test scripts, run `npm test`.
@@ -115,7 +84,7 @@ This documentation was originally built using [Flatdoc](http://ricostacruz.com/f
 
 ### Contributions
 
-This documentation is managed by Particle, but supported by the community. We welcome contributions such as:
+This documentation is managed by Fresh Vine, but supported by the community. We welcome contributions such as:
 
 * Edits to improve grammar or fix typos
 * Edits to improve clarity
@@ -129,4 +98,4 @@ Making a contribution is as simple as forking this repository, making edits to y
 
 These files have been made available online through a [Creative Commons Attribution-ShareAlike 3.0 license](http://creativecommons.org/licenses/by-sa/3.0/us/).
 
-You are welcome to distribute, remix, and use these files for commercial purposes. If you do so, please attribute the original design to Spark Labs, Inc. both on the website and on the physical packaging of the product or in the instruction manual. All derivative works must be published under the same or a similar license.
+You are welcome to distribute, remix, and use these files for commercial purposes. If you do so, please attribute the original design to Spark Labs, Inc. (the Fresh Vine docs are a derivitive work of theirs) both on the website and on the physical packaging of the product or in the instruction manual. All derivative works must be published under the same or a similar license.
