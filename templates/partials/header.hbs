@@ -5,21 +5,21 @@
 				<i class="ion-navicon" title="show/hide the navigation"></i>
 			</a>
 		</div>
-		<a href="/">
+		<a href="/" class='logoHolder'>
 			<img src="/assets/images/fresh-vine-docs.png" id="logo">
 		</a>
 		<div class="sections">
 			<a class="nav {{#contains path.href 'guide'}}active{{/contains}}" href="/guide/">Guide</a>
-			<a class="nav {{#contains path.href 'developers'}}active{{/contains}}" href="/developers/">developers</a>
+			<a class="nav {{#contains path.href 'developers'}}active{{/contains}}" href="/developers/">Developers</a>
 		</div>
 		<div class="dropdown mobile-only">
 			<a id="dLabel" data-target="#" class="nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-			{{first-word-in-relative-url path.href}}
+
 				<i class="icon ion-chevron-down"></i>
 			</a>
 			<ul class="dropdown-menu" aria-labelledby="dLabel">
 				<li class="{{#contains path.href 'guide'}}active{{/contains}}"><a href="/guide/">Guide</a></li>
-				<li class="{{#contains path.href 'developers'}}active{{/contains}}"><a href="/developers/">developers</a></li>
+				<li class="{{#contains path.href 'developers'}}active{{/contains}}"><a href="/developers/">Developers</a></li>
 			</ul>
 		</div>
 	</div>

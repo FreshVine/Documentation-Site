@@ -2,6 +2,88 @@
  * FV Layout Adaptations
  **************/
 
+
+/* ----------------------------------------------------------------------------
+ * Fonts
+ */
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/Roboto-Thin-webfont.eot');
+	src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+		url('../fonts/Roboto-Thin-webfont.ttf')  format('truetype'),
+		url('../fonts/Roboto-Thin-webfont.svg##Roboto-Thin-webfont') format('svg');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/Roboto-Light-webfont.eot');
+	src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+		url('../fonts/Roboto-Light-webfont.ttf')  format('truetype'),
+		url('../fonts/Roboto-Light-webfont.svg##Roboto-Light-webfont') format('svg');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 300;
+	src: url('../fonts/Roboto-LightItalic-webfont.eot');
+	src: url('../fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-LightItalic-webfont.woff') format('woff'),
+		url('../fonts/Roboto-LightItalic-webfont.ttf')  format('truetype'),
+		url('../fonts/Roboto-LightItalic-webfont.svg##Roboto-LightItalic-webfont') format('svg');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/Roboto-Medium-webfont.eot');
+	src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Medium-webfont.woff') format('woff'),
+		url('../fonts/Roboto-Medium-webfont.ttf')  format('truetype'),
+		url('../fonts/Roboto-Medium-webfont.svg##Roboto-Medium-webfont') format('svg');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 500;
+	src: url('../fonts/Roboto-MediumItalic-webfont.eot');
+	src: url('../fonts/Roboto-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-MediumItalic-webfont.woff') format('woff'),
+		url('../fonts/Roboto-MediumItalic-webfont.ttf')  format('truetype'),
+		url('../fonts/Roboto-MediumItalic-webfont.svg##Roboto-MediumItalic-webfont') format('svg');
+}
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/RobotoCondensed-Bold-webfont.eot');
+	src: url('../fonts/RobotoCondensed-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RobotoCondensed-Bold-webfont.woff') format('woff'),
+		url('../fonts/RobotoCondensed-Bold-webfont.ttf')  format('truetype'),
+		url('../fonts/RobotoCondensed-Bold-webfont.svg##RobotoCondensed-Bold-webfont') format('svg');
+}
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../fonts/RobotoCondensed-BoldItalic-webfont.eot');
+	src: url('../fonts/RobotoCondensed-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RobotoCondensed-BoldItalic-webfont.woff') format('woff'),
+		url('../fonts/RobotoCondensed-BoldItalic-webfont.ttf')  format('truetype'),
+		url('../fonts/RobotoCondensed-BoldItalic-webfont.svg##RobotoCondensed-BoldItalic-webfont') format('svg');
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Header Design
+ */
+
+
 body .header{
 	background-color: #87C549; // FV Green
 	border-bottom: none;
@@ -32,14 +114,81 @@ body .header .left a.nav{
 	padding: 0 20px;
     text-align: center;
 }
-body a.nav:hover{
+body a.nav:hover,
+body .dropdown:hover a.nav{
 	background: rgba(64, 65, 64, .5);
 	color: #ffffff;
 }
-body a.nav.active{
+body a.nav.active,
+body .header .dropdown.mobile-only.open a.nav{
 	background: #404140;
 	color: #ffffff;
 }
+
+body .header .dropdown.mobile-only a.nav{
+	min-width: 0;
+	margin: 0 !important;
+	padding: 0 15px;
+}
+body .header .dropdown.mobile-only a.nav i{
+	font-size: 26px;
+	margin: 0;
+}
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:focus,
+.dropdown-menu>.active>a:hover{
+	background: #404140;
+	color: #ffffff;
+}
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover{
+	background: rgba(64, 65, 64, .5);
+	color: #ffffff;
+}
+
+body .dropdown-menu{
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+	body .header .left{
+		display: block;
+		float: none;
+		height: 100%;
+		text-align: center;
+	}
+
+	body .dropdown{
+		position: static;
+	}
+	body .dropdown-menu{
+		border-radius: 0;
+	    font-size: 20px;
+	    right: 0;
+	    left: auto;
+	}
+	body .header .dropdown.mobile-only{
+		float: right;
+	}
+
+	body .header .left .logoHolder{
+	    margin-right: 0px;
+	    float: none;
+	}
+
+	body .header .logoHolder #logo{
+		float: none;
+		margin: 8px 0 0;
+	}
+}
+@media (max-width: 1200px ){
+
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Left Menu Bar Design
+ */
 
 .menubar{
 	background-color: #F7F7F7;
@@ -71,13 +220,28 @@ body .header .search{
 	min-height: 50%;
 }
 
-//
-// Footer Stuff
+
+/* ----------------------------------------------------------------------------
+ * Footer Design
+ */
+
+body .content-inner{
+    min-height: 100%;
+    position: relative;
+}
+
+.mainFooterSpacer{
+	height: 90px;
+}
+
 .mainFooter{
 	background-color: #EEEEEE;
     margin-top: 30px;
 	min-height: 55px;
-	position: relative;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .mainFooter .logoMark{
@@ -100,6 +264,9 @@ body .header .search{
 }
 
 .mainFooter .pieceB{
-	float: right;
 	margin-right: 90px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

@@ -345,6 +345,14 @@ Created by Zach Supalla.
     }
   };
 
+  Docs.scrollNavOnload = function(){	// Scroll the side menu to the current value
+	  if( $('.menubar').is('.menu-visible')){
+		  $('.menubar').animate({
+	          scrollTop: $(".top-level.active").offset().top - $('.header').height()
+	      }, 0);
+	  }
+  }
+
   $(window).resize(Docs.addMenubarClass);
 
   // Ok, then let's do it!
@@ -359,6 +367,7 @@ Created by Zach Supalla.
   Docs.buildSearch();
   Docs.toggleNav();
   Docs.toggleShowing();
+  Docs.scrollNavOnload();
   prettyPrint();
 
 })(jQuery);
