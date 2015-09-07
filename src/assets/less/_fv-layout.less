@@ -2,8 +2,51 @@
  * FV Layout Adaptations
  **************/
 
-a.nav.active, a.nav:hover{
-	color: #87C549;	// FV Green
+body .header{
+	background-color: #87C549; // FV Green
+	border-bottom: none;
+}
+
+body #logo{
+	height: 32px;
+	width: auto;
+	margin: 8px 20px 0 10px;
+    padding: 0;
+}
+
+.toggle-nav{
+	margin: 0;
+}
+body .toggle-nav a{
+	color: #ffffff;
+	padding: 10px 20px;
+}
+
+body .header .left a.nav{
+	border-bottom: none;
+	color: #ffffff;
+    height: 52px;
+    line-height: 52px;
+    margin: 0;
+    min-width: 100px;
+	padding: 0 20px;
+    text-align: center;
+}
+body a.nav:hover{
+	background: rgba(64, 65, 64, .5);
+	color: #ffffff;
+}
+body a.nav.active{
+	background: #404140;
+	color: #ffffff;
+}
+
+.menubar{
+	background-color: #F7F7F7;
+	border-right-color: #F2F2F2;
+}
+h3.guide-section-titles{
+	color: #404140;
 }
 .menubar li a:hover,
 .menubar li a:visited:hover,
@@ -11,11 +54,52 @@ ul.in-page-toc li.active a{
 	color: #31C0EF;	// FV Blue
 }
 .menubar li.active.top-level{
-	background-color: #F7F7F7;
+	background-color: #F2F2F2;
 	color: #404140;
 }
 
 body .header .search{
 	border-left: none;
 	padding: 0 22px;
+}
+
+.content-root {
+    top: 52px;
+}
+
+.content, .content-body{
+	min-height: 50%;
+}
+
+//
+// Footer Stuff
+.mainFooter{
+	background-color: #EEEEEE;
+    margin-top: 30px;
+	min-height: 55px;
+	position: relative;
+}
+
+.mainFooter .logoMark{
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    max-width: 80px;
+}
+
+.mainFooter .logoMark{
+	background-image: url('/assets/images/fresh-vine-footer-mark.png');
+    background-size: auto 100px;
+    background-repeat: no-repeat;
+    border: none;
+    display: inline-block;
+    height: 100px;
+	
+    vertical-align: middle;
+	width: 83px;
+}
+
+.mainFooter .pieceB{
+	float: right;
+	margin-right: 90px;
 }
