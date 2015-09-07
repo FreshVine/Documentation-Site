@@ -178,6 +178,7 @@ exports.build = function(callback) {
 
 exports.server = function(callback) {
   environment = 'development';
+  // environment = 'production';
   git.branch(function (str) {
     gitBranch = process.env.TRAVIS_BRANCH || str;
     exports.metalsmith().use(serve())
@@ -185,9 +186,11 @@ exports.server = function(callback) {
         paths: {
           "${source}/content/**/*.md": true,
           "${source}/assets/less/*.less": "assets/less/*.less",
-          "../templates/reference.hbs": "content/reference/*.md",
+          "../templates/reference.hbs": "content/developers/**/*.md",
           "../templates/guide.hbs": "content/guide/**/*.md",
-          "${source}/assets/js/*.js" : true
+          "../templates/start.hbs" : "content/index.md",
+          "${source}/assets/js/*.js" : true,
+          "${source}/assets/images/*" : true
         },
         livereload: true
       }))

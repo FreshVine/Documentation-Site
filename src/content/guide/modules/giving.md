@@ -1,5 +1,5 @@
 ---
-title: Donations &amp; Giving
+title: Donations & Giving
 order: 6
 columns: two
 template: guide.hbs

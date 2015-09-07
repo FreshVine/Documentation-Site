@@ -146,6 +146,8 @@ body .header .dropdown.mobile-only a.nav i{
 	color: #ffffff;
 }
 
+body .header .search{ display: none; }
+
 body .dropdown-menu{
     font-size: 20px;
 }
@@ -280,7 +282,7 @@ body .content-wrap{
 
 
 /* ----------------------------------------------------------------------------
- * Make it print all Pretty
+ * Print Adjustments - Making it super pretty
  */
 @media print
 {
@@ -376,4 +378,251 @@ body .content-wrap{
 		bottom: auto;
 	    width: 100%;
 	}
+}
+
+
+
+/* ----------------------------------------------------------------------------
+ * Landing Page
+ */
+.start-page .content{
+    margin: 0 auto;
+}
+.start-page .toggle-nav,
+.error404 .toggle-nav{ display: none; }
+.start-page .header .left,
+.error404 .header .left{ padding-left: 0px; }
+
+.mega-header{
+	background: #fff url('/assets/images/fresh-vine-plaid-background.png') repeat;
+    background-size: 20%;
+	min-height: 200px;
+	height: 300px;
+	text-align: center;
+}
+.vCenterParent{
+	    -webkit-transform-style: preserve-3d;
+	    -moz-transform-style: preserve-3d;
+	    -ms-transform-style: preserve-3d;
+	    -o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.vCenter{
+    position: relative;
+    top: 50%;
+	    -webkit-transform: translateY(-50%);
+	    -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.mega-header h1{
+	// color: #ffffff;
+    font-size: 102px;
+    line-height: .8em;
+}
+.mega-header .subtitle{
+	color: #404140;
+	font-size: 34px;
+	font-weight: 100;
+}
+
+/* ----------------------------------------------------------------------------
+ * Table of Contents - Landing Page
+ */
+.toc .tocHeader{
+	font-size: 3em;
+    font-weight: 300;
+    line-height: .8em;
+}
+.toc .tocSubtitle{
+    font-weight: 300;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.2em;
+    padding-top: 10px;
+}
+.content .toc ul{
+	padding: 0;
+	margin: 0;
+}
+.content .toc ul > li{
+    list-style: none;
+}
+.content .toc ul>li>h3{
+    color: #B0B0B0;
+    font-size: 2em;
+    font-style: italic;
+    padding-bottom: 0;
+    padding-top: 35px;
+    line-height: .8em;
+}
+.content .toc ul>li>h3:after{
+    height: 0;
+    background: none;
+    position: absolute;
+    width: auto;
+    bottom: 0;
+	left: 0;
+}
+
+.content .toc ul>li ol{
+	padding: 0;
+	margin-left: 60px;
+}
+.content .toc ul>li ol>li{
+	color: #404140;
+	font-size: 18px;
+	font-weight: 500;
+}
+.content .toc ul>li ol>li a{
+	display: block;
+	border: 1px solid #f2f2f2;
+	background-color: #F7F7F7;
+	font-weight: 300;
+    padding-left: 40px;
+    margin-left: -40px;
+}
+
+.content .toc ul>li ol>li a:hover{
+    background-color: #00adef;
+    color: white;
+}
+
+@media (max-width: 767px) {
+	.content .toc:first-child>ul{
+		margin-bottom: 50px;
+	}
+}
+
+
+/* ----------------------------------------------------------------------------
+ * 404 Error Page
+ */
+.error404 .content-wrap{
+	background: #fff url('/assets/images/fresh-vine-plaid-background.png') repeat;
+    background-size: 20%;
+	text-align: center;
+}
+.error404 .vCenterParent{
+	height: 500px;
+}
+.error404 .page h1{
+	font-size: 102px;
+	text-align: center;
+    line-height: .8em;
+}
+// .error404 .page-content{
+// 	max-width: 7
+// }
+.error404 .mainFooterSpacer{
+	height: 50px;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Basic Grid System
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+@media (min-width: 1200px) {
+    .row-fluid {
+      width: 100%;
+      *zoom: 1;
+    }
+    .row-fluid:before,
+    .row-fluid:after {
+      display: table;
+      line-height: 0;
+      content: "";
+    }
+    .row-fluid:after {
+      clear: both;
+    }
+    .row-fluid [class*="span"] {
+      display: block;
+      float: left;
+      width: 100%;
+      min-height: 30px;
+      margin-left: 2.564102564102564%;
+      *margin-left: 2.5109110747408616%;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    .row-fluid [class*="span"]:first-child {
+      margin-left: 0;
+    }
+    .row-fluid .controls-row [class*="span"] + [class*="span"] {
+      margin-left: 2.564102564102564%;
+    }
+    .row-fluid .span6 {
+      width: 48.717948717948715%;
+      *width: 48.664757228587014%;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .row-fluid {
+      width: 100%;
+      *zoom: 1;
+    }
+    .row-fluid:before,
+    .row-fluid:after {
+      display: table;
+      line-height: 0;
+      content: "";
+    }
+    .row-fluid:after {
+      clear: both;
+    }
+    .row-fluid [class*="span"] {
+      display: block;
+      float: left;
+      width: 100%;
+      min-height: 30px;
+      margin-left: 2.7624309392265194%;
+      *margin-left: 2.709239449864817%;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    .row-fluid [class*="span"]:first-child {
+      margin-left: 0;
+    }
+    .row-fluid .controls-row [class*="span"] + [class*="span"] {
+      margin-left: 2.7624309392265194%;
+    }
+    .row-fluid .span6 {
+      width: 48.61878453038674%;
+      *width: 48.56559304102504%;
+    }
+}
+@media (max-width: 767px) {
+    .row-fluid {
+      width: 100%;
+    }
+    [class*="span"],
+    .row-fluid [class*="span"] {
+      display: block;
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
 }

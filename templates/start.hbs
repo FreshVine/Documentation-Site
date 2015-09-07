@@ -1,26 +1,89 @@
 <!doctype html>
-<html>
+<html class="start-page">
 <head>
-  <!-- REDIRECT SCRIPT -->
-  <script src='/assets/js/redirect.js'></script>
-  {{> head sectionTitle='Start'}}
+  {{> head sectionTitle='Guides'}}
 </head>
 <body>
+	<div id="docs" data-level>
+		{{> header}}
 
-  <div id="docs">
-    <div class='header'>
-      <div class='left'>
-        <a href="https://www.particle.io">
-          <img src="/assets/images/particle-docs.png" id="logo">
-        </a>
-      </div>
-    </div>
 
-    <div class='getting-started'>
-      {{{contents}}}
-    </div>
-  </div>
+		<div class="content-root start-page">
+			<div class="page">
+				<div class='content-inner'>
+					<div class='content-wrap'>
+						<div class="mega-header vCenterParent">
+							<div class="vCenter">
+								<h1>{{plaidTitle}}</h1>
+								<div class="subtitle">{{plaidSubtitle}}</div>
+							</div>
+						</div>
+						<div class="content">
+							{{{contents}}}
 
-  {{> scripts}}
+							<div class="row-fluid">
+								<div class="span6 toc">
+									<div class="tocHeader">Guide</div>
+									<div class="tocSubtitle">{{tocGuideSubtitle}}</div>
+									<ul class="nav guide-menu">
+										{{#each guide}}
+										<li data-level="{{inc @index}}" class="guide-section {{#contains ../path.href section}}active-section{{/contains}}">
+											<h3 class="guide-section-titles" >{{{titelize section}}}</h3>
+											<ol type="1">
+												{{#each this}}
+												<li class="top-level {{#page-equal ../../path.href ../../path.name path.href path.name}}active{{/page-equal}}" data-level="{{inc @../index}}.{{inc @index}}">
+													{{#page-equal ../../path.href ../../path.name path.href path.name}}
+													<span>{{{title}}}</span>
+													{{#if ../../../toc}}
+													<i id="toggle-in-page-nav" class="ion-minus"></i>
+													{{/if}}
+													{{else}}
+													<a href="{{path.href}}{{path.name}}">{{title}}</a>
+													{{/page-equal}}
+												</li>
+												{{/each}}
+											</ol>
+										</li>
+										{{/each}}
+									</ul>
+
+								</div>
+
+								<div class="span6 toc">
+									<div class="tocHeader">Developers</div>
+									<div class="tocSubtitle">{{tocDevelopersSubtitle}}</div>
+									<ul class="nav reference-menu">
+									{{#each developers}}
+										<li data-level="{{inc @index}}" class="guide-section {{#contains ../path.href section}}active-section{{/contains}}">
+											<h3 class="guide-section-titles" >{{{titelize section}}}</h3>
+											<ol type="1">
+												{{#each this}}
+												<li class="top-level {{#page-equal ../../path.href ../../path.name path.href path.name}}active{{/page-equal}}" data-level="{{inc @../index}}.{{inc @index}}">
+													{{#page-equal ../../path.href ../../path.name path.href path.name}}
+													<span>{{{title}}}</span>
+													{{#if ../../../toc}}
+													<i id="toggle-in-page-nav" class="ion-minus"></i>
+													{{/if}}
+													{{else}}
+													<a href="{{path.href}}{{path.name}}">{{title}}</a>
+													{{/page-equal}}
+												</li>
+												{{/each}}
+											</ol>
+										</li>
+									{{/each}}
+									</ul>
+								</div>
+							</div>
+
+						</div>
+				    {{> footer}}
+					</div>
+		        </div>
+			</div>
+		</div>
+	</div>
+
+    {{> scripts}}
 </body>
 </html>

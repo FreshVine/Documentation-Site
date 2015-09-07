@@ -2,7 +2,7 @@
 title: API
 columns: two
 template: guide.hbs
-order: 1
+order: 6
 ---
 
 # Fresh Vine {{title}}
