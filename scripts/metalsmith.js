@@ -130,16 +130,18 @@ exports.metalsmith = function() {
       selector: 'h2, h3',
       pattern: '**/**/*.md'
     }))
-    // .use(lunr({
-    //   indexPath: 'search-index.json',
-    //   fields: {
-    //     contents: 1,
-    //     title: 10
-    //   },
-    //   pipelineFunctions: [
-    //     _removeEmptyTokens
-    //   ]
-    // }))
+	// .use(lunr({
+	// 	ref: 'title',
+	// 	indexPath: 'search-index.json',
+	// 	fields: {
+	// 		contents: 1,
+	// 		title: 10
+	// 	},
+	// 	preprocess: function(content) {
+	// 		// Replace all occurrences of __title__ with the current file's title metadata.
+	// 		return content.replace(/__title__/g, this.title);
+	// 	}
+	// }))
     .use(templates({
       engine: 'handlebars',
       directory: '../templates'
