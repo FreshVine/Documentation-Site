@@ -23,36 +23,37 @@ The virtual host will do two things for us.
   1.  It will redirect all non encrypted traffic to the encrypted site.  
   1.  It will use a proxy pass through to showcase the metalsmith site via HTTPS.  
 
+```
+<VirtualHost *:80>
+	ServerName docs.freshvine.co
+	ServerAlias docs.freshvine.co
+	Redirect "/" "https://docs.freshvine.co/"
+</VirtualHost>
 
-	<VirtualHost *:80>
-		ServerName docs.freshvine.co
-		ServerAlias docs.freshvine.co
-		Redirect "/" "https://docs.freshvine.co/"
-	</VirtualHost>
-	<VirtualHost *:443>
-		SSLEngine on
-		SSLCertificateFile /etc/certs/CERTIFICATE.crt
-		SSLCertificateKeyFile /etc/certs/CERTIFICATE.key
-		SSLCertificateChainFile /etc/certs/KEYCHAIN-FILE.ca.crt
+<VirtualHost *:443>
+	SSLEngine on
+	SSLCertificateFile /etc/certs/CERTIFICATE.crt
+	SSLCertificateKeyFile /etc/certs/CERTIFICATE.key
+	SSLCertificateChainFile /etc/certs/KEYCHAIN-FILE.ca.crt
 
-		ServerAdmin contact@domain.com
-		ServerName docs.freshvine.co
-		ServerAlias docs.freshvine.co
+	ServerAdmin contact@domain.com
+	ServerName docs.freshvine.co
+	ServerAlias docs.freshvine.co
 
-		ProxyPreserveHost On
-		ProxyRequests off
+	ProxyPreserveHost On
+	ProxyRequests off
 
-		<Proxy *>
-			Order deny,allow
-			Allow from all
-		</Proxy>
+	<Proxy *>
+		Order deny,allow
+		Allow from all
+	</Proxy>
 
-		<Location />
-			ProxyPass http://localhost:8080/
-			ProxyPassReverse http://localhost:8080/
-		</Location>
-	</VirtualHost>
-
+	<Location />
+		ProxyPass http://localhost:8080/
+		ProxyPassReverse http://localhost:8080/
+	</Location>
+</VirtualHost>
+```
 
 ## Starting up the Node server
 
@@ -62,6 +63,6 @@ When in testing/development you are likely running `npm start` to get node off t
 	forever start -l fv-docs-forever.log -e fv-docs-err.log -a scripts/server.js
 	forever list
 
-If/When you need to stop the server or restart it.
+If/When you need to get a clean build and need to restart it you can use the line below. Will work from any directory.
 
 	forever restartall
