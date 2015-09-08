@@ -185,24 +185,40 @@ exports.server = function(callback) {
 	// git.branch(function (str) {
 		// gitBranch = process.env.TRAVIS_BRANCH || str;
 		exports.metalsmith().use(serve())
+		// .use(msIf(
+		// 	environment === 'production',
+		// 	serve({
+		// 		port: 8080
+		// 	})
+		// ))
 		.use(msIf(
-			environment === 'production',
-			serve({
-				port: 8080
+			environment === 'development',
+			watch({
+				paths: {
+					"${source}/content/**/*.md": true,
+					"${source}/assets/less/*.less": "assets/less/*.less",
+					"../templates/reference.hbs": "content/developers/**/*.md",
+					"../templates/guide.hbs": "content/guide/**/*.md",
+					"../templates/start.hbs" : "content/index.md",
+					"${source}/assets/js/*.js" : true,
+					"${source}/assets/images/*" : true
+				},
+				livereload: true
 			})
 		))
-		.use(watch({
-			paths: {
-				"${source}/content/**/*.md": true,
-				"${source}/assets/less/*.less": "assets/less/*.less",
-				"../templates/reference.hbs": "content/developers/**/*.md",
-				"../templates/guide.hbs": "content/guide/**/*.md",
-				"../templates/start.hbs" : "content/index.md",
-				"${source}/assets/js/*.js" : true,
-				"${source}/assets/images/*" : true
-			},
-			livereload: true
-		}))
+		.use(msIf(
+			environment === 'production',
+			watch({
+				paths: {
+					"${source}/content/**/*": "**/*",	// Rebuild Everything
+					"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
+					"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
+					"${source}/assets/images/**/*" : true,	// Just build that image
+					"../templates/**/*": "**/*"	// Rebuild Everything
+				},
+				lifereload: false
+			})
+		))
 		.build(function(err, files) {
 			if (err) {
 				console.error(err, err.stack);
