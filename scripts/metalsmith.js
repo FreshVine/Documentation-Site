@@ -71,15 +71,18 @@ exports.metalsmith = function() {
     .use(partials({
       directory: '../templates/partials'
     }))
+    // .use(fileMetadata([
+    //   {pattern: "content/**/*.md", metadata: {"lunr": true, "assets": '/assets', "branch": gitBranch}}
+    // ]))
+    // .use(msIf(
+    //   environment === 'development',
+    //   fileMetadata([
+    //     {pattern: "content/**/*.md", metadata: {"development": true}}
+    //   ])
+    // ))
     .use(fileMetadata([
-      {pattern: "content/**/*.md", metadata: {"lunr": true, "assets": '/assets', "branch": gitBranch}}
+      {pattern: "content/**/*.md", metadata: {"assets": '/assets'}}
     ]))
-    .use(msIf(
-      environment === 'development',
-      fileMetadata([
-        {pattern: "content/**/*.md", metadata: {"development": true}}
-      ])
-    ))
     .use(precompile({
       directory: '../templates/precompile',
       dest: 'assets/js/precompiled.js',
@@ -149,58 +152,64 @@ exports.metalsmith = function() {
     .use(permalinks({
       relative: false
     }))
+    // .use(msIf(
+    //   environment !== 'development',
+    //   compress({overwrite: true})
+    // ))
     .use(redirect({
       '/developers': '/developers/overview',
       '/developers/authentication': '/developers/authentication/overview',
       '/guide': '/guide/getting-started/overview',
       '/guide/getting-started': '/guide/getting-started/overview'
-    }))
-    .use(msIf(
-      environment !== 'development',
-      compress({overwrite: true})
-    ));
+    }));
 
   return metalsmith;
 };
 
 
-exports.build = function(callback) {
-  git.branch(function (str) {
-    gitBranch = process.env.TRAVIS_BRANCH || str;
-    exports.metalsmith().build(function(err, files) {
-      if (err) { throw err; }
-      if (callback) {
-        callback(err, files);
-      }
-    });
-  });
-};
+// exports.build = function(callback) {
+//   git.branch(function (str) {
+//     gitBranch = process.env.TRAVIS_BRANCH || str;
+//     exports.metalsmith().build(function(err, files) {
+//       if (err) { throw err; }
+//       if (callback) {
+//         callback(err, files);
+//       }
+//     });
+//   });
+// };
 
 exports.server = function(callback) {
-  environment = 'development';
-  // environment = 'production';
-  git.branch(function (str) {
-    gitBranch = process.env.TRAVIS_BRANCH || str;
-    exports.metalsmith().use(serve())
-      .use(watch({
-        paths: {
-          "${source}/content/**/*.md": true,
-          "${source}/assets/less/*.less": "assets/less/*.less",
-          "../templates/reference.hbs": "content/developers/**/*.md",
-          "../templates/guide.hbs": "content/guide/**/*.md",
-          "../templates/start.hbs" : "content/index.md",
-          "${source}/assets/js/*.js" : true,
-          "${source}/assets/images/*" : true
-        },
-        livereload: true
-      }))
-      .build(function(err, files) {
-        if (err) {
-          console.error(err, err.stack);
-        }
-        if (callback) {
-          callback(err, files);
-        }
-      });
-  });
+	environment = 'development';
+	// environment = 'production';
+	// git.branch(function (str) {
+		// gitBranch = process.env.TRAVIS_BRANCH || str;
+		exports.metalsmith().use(serve())
+		.use(msIf(
+			environment === 'production',
+			serve({
+				port: 8080
+			})
+		))
+		.use(watch({
+			paths: {
+				"${source}/content/**/*.md": true,
+				"${source}/assets/less/*.less": "assets/less/*.less",
+				"../templates/reference.hbs": "content/developers/**/*.md",
+				"../templates/guide.hbs": "content/guide/**/*.md",
+				"../templates/start.hbs" : "content/index.md",
+				"${source}/assets/js/*.js" : true,
+				"${source}/assets/images/*" : true
+			},
+			livereload: true
+		}))
+		.build(function(err, files) {
+			if (err) {
+				console.error(err, err.stack);
+			}
+			if (callback) {
+				callback(err, files);
+			}
+		});
+  // });
 };
