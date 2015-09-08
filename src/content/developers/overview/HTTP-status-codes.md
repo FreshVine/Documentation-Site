@@ -2,7 +2,7 @@
 title: HTTP Status Codes 
 template: reference.hbs
 columns: two
-order: 3
+order: 4
 ---
 # API HTTP Response Status Codes  
 
@@ -56,6 +56,8 @@ You've exceeded the number of requests you are allowed to make during a given ti
 
 
 ## 5XX - Server Error
+
+These errors will likely not return content in a format that is usable. You should ensure that however you are making your requests that you escape out on all 500 level server errors.  
 
 ### 500: Internal Server Error  
 Something is broken, really bad. Let us know so that we can bring things back online.  

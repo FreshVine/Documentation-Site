@@ -1,8 +1,8 @@
 ---
 title: Making a Request
 template: reference.hbs
-columns: three
-order: 1
+columns: two
+order: 2
 ---
 
 ## Approach: Keys

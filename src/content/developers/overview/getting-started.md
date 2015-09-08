@@ -2,9 +2,9 @@
 title: Developers Overview
 template: reference.hbs
 columns: two
-order: 2
+order: 1
 ---
-# Developers Overview
+# Developers Starting Point  
 
 The communities that use Fresh Vine are nonprofits with huge hearts and tight budgets. This would likely make you, the person reading the developer docs either; a saint of a volunteer, or one of the most exciting tech projects that community has had in a long while.  
 

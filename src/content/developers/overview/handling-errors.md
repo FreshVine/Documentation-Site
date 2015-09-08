@@ -1,8 +1,8 @@
 ---
 title: Handling Errors
 template: reference.hbs
-columns: three
-order: 2
+columns: two
+order: 3
 ---
 
 Error's are sent back in a normal structure to make it easier for you to catch and process.
