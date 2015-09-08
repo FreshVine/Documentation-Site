@@ -23,7 +23,7 @@ The virtual host will do two things for us.
   1.  It will redirect all non encrypted traffic to the encrypted site.  
   1.  It will use a proxy pass through to showcase the metalsmith site via HTTPS.  
 
-  
+
 	<VirtualHost *:80>
 		ServerName docs.freshvine.co
 		ServerAlias docs.freshvine.co
