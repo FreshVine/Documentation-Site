@@ -19,8 +19,8 @@ var copy = require('metalsmith-copy');
 var inPlace = require('metalsmith-in-place');
 var watch = require('metalsmith-watch');
 var autotoc = require('metalsmith-autotoc');
-// var lunr = require('metalsmith-lunr');
-// var lunr_ = require('lunr');
+var lunr = require('metalsmith-lunr');
+var lunr_ = require('lunr');
 var fileMetadata = require('metalsmith-filemetadata');
 var msIf = require('metalsmith-if');
 var precompile = require('./precompile');
@@ -81,7 +81,8 @@ exports.metalsmith = function() {
     //   ])
     // ))
     .use(fileMetadata([
-      {pattern: "content/**/*.md", metadata: {"assets": '/assets'}}
+      {pattern: "content/**/*.md", metadata: { "assets": '/assets'}}
+      // {pattern: "content/**/*.md", metadata: { "lunr": true, "assets": '/assets'}}
     ]))
     .use(precompile({
       directory: '../templates/precompile',
@@ -133,18 +134,18 @@ exports.metalsmith = function() {
       selector: 'h2, h3',
       pattern: '**/**/*.md'
     }))
-	// .use(lunr({
-	// 	ref: 'title',
-	// 	indexPath: 'search-index.json',
-	// 	fields: {
-	// 		contents: 1,
-	// 		title: 10
-	// 	},
-	// 	preprocess: function(content) {
-	// 		// Replace all occurrences of __title__ with the current file's title metadata.
-	// 		return content.replace(/__title__/g, this.title);
-	// 	}
-	// }))
+	.use(lunr({
+		ref: 'title',
+		indexPath: 'search-index.json',
+		fields: {
+			contents: 1,
+			title: 10
+		},
+		preprocess: function(content) {
+			// Replace all occurrences of __title__ with the current file's title metadata.
+			return content.replace(/__title__/g, this.title);
+		}
+	}))
     .use(templates({
       engine: 'handlebars',
       directory: '../templates'
@@ -157,7 +158,8 @@ exports.metalsmith = function() {
     //   compress({overwrite: true})
     // ))
     .use(redirect({
-      '/developers': '/developers/overview',
+      '/developers': '/developers/overview/getting-started',
+      '/developers/overview/': '/developers/overview/getting-started',
       '/developers/authentication': '/developers/authentication/overview',
       '/guide': '/guide/getting-started/overview',
       '/guide/getting-started': '/guide/getting-started/overview'
@@ -206,19 +208,19 @@ exports.server = function(callback) {
 				livereload: true
 			})
 		))
-		.use(msIf(
-			environment === 'production',
-			watch({
-				paths: {
-					"${source}/content/**/*": "**/*",	// Rebuild Everything
-					"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
-					"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
-					"${source}/assets/images/**/*" : true,	// Just build that image
-					"../templates/**/*": "**/*"	// Rebuild Everything
-				},
-				lifereload: false
-			})
-		))
+		// .use(msIf(
+		// 	environment === 'production',
+		// 	watch({
+		// 		paths: {
+		// 			"${source}/content/**/*": "**/*",	// Rebuild Everything
+		// 			"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
+		// 			"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
+		// 			"${source}/assets/images/**/*" : true,	// Just build that image
+		// 			"../templates/**/*": "**/*"	// Rebuild Everything
+		// 		},
+		// 		lifereload: false
+		// 	})
+		// ))
 		.build(function(err, files) {
 			if (err) {
 				console.error(err, err.stack);

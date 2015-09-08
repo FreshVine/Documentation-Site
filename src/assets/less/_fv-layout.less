@@ -78,6 +78,13 @@
 		url('../fonts/RobotoCondensed-BoldItalic-webfont.svg##RobotoCondensed-BoldItalic-webfont') format('svg');
 }
 
+/* ----------------------------------------------------------------------------
+ * Genral adaptations
+ */
+.content iframe, .content img{
+	max-width: 100%;
+}
+
 
 /* ----------------------------------------------------------------------------
  * Header Design
@@ -146,8 +153,6 @@ body .header .dropdown.mobile-only a.nav i{
 	color: #ffffff;
 }
 
-body .header .search{ display: none; }
-
 body .dropdown-menu{
     font-size: 20px;
 }
@@ -182,6 +187,19 @@ body .dropdown-menu{
 		float: none;
 		margin: 8px 0 0;
 	}
+}
+
+/* ----------------------------------------------------------------------------
+ * Search Bar and Results
+ */
+body .header .search{ display: none; }
+body .header .search .search-results{
+    left: auto;
+    right: 20px;
+}
+.search .search-results:after, .search .search-results:before{
+	left: auto;
+	right: 10px;
 }
 
 
@@ -419,9 +437,6 @@ body .content-wrap{
 .error404 .toggle-nav{ display: none; }
 .start-page .header .left,
 .error404 .header .left{ padding-left: 0px; }
-.start-page .content img{
-	max-width: 100%;
-}
 
 .mega-header{
 	background: #fff url('/assets/images/fresh-vine-plaid-background.png') repeat;
