@@ -35,7 +35,7 @@ not.
 
 ### Deployment
   
-  
+Check out the [Setup documentation](SETUP.md) for instructions/tips on getting this running in a production environment.  
   
 ### Organization
 

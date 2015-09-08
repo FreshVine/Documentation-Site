@@ -21,8 +21,7 @@ The assumption is that you either have a server running apache already, or are a
 ### Configuring Virtual hosts
 The virtual host will do two things for us.
   1.  It will redirect all non encrypted traffic to the encrypted site.  
-  1.  It will use a proxy pass through to showcase the metalsmith site via HTTPS.
-
+  1.  It will use a proxy pass through to showcase the metalsmith site via HTTPS.  
 
   
 	<VirtualHost *:80>
@@ -57,8 +56,12 @@ The virtual host will do two things for us.
 
 ## Starting up the Node server
 
-When in testing/development you are likely running `npm start` to get node off to the races. Yet this requires the current process in the CLI to not be stopped. Instead we will use the node module [forever](https://github.com/foreverjs/forever).
+When in testing/development you are likely running `npm start` to get node off to the races. Yet this requires the current process in the CLI to not be stopped. Instead we will use the node module [forever](https://github.com/foreverjs/forever) which we installed above.  
 
 
-	forever start -l fv-docs-forever.log -e fv-docs-err.log scripts/server.js
+	forever start -l fv-docs-forever.log -e fv-docs-err.log -a scripts/server.js
 	forever list
+
+If/When you need to stop the server or restart it.
+
+	forever restartall
