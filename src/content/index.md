@@ -7,6 +7,9 @@ tocDevelopersSubtitle: Details about how to use the API and other engineerish th
 template: start.hbs
 ---
 
-Not sure what to put he
+![Three Devices all running Fresh Vine](/assets/images/welcome-mockups.jpg)
+# The Docs are a work in progress.  
+
+Especially as we get started. We felt it more important to get them online, then to wait for some point of completion. If there is a section or question you'd like answered quickly, please contact us through support.
 
 
