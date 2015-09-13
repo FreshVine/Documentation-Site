@@ -22,13 +22,14 @@ After you've installed the app the screen will prompt you with a 6 digit code. E
 You'll notice that every event, service, and service template page has an Event Kiosk settings box. Simply click the enable button and you're event/service will show up on the kiosk. You can further configure the appearance and some of the basic functionality from that settings box.  
 
 ### Connecting the Printer
+
 Ensure you are using a printer that supports one of our supported label sizes. We have a Dymo and Zebra printer label that was support. Before you open the Event Kiosk App settings make sure you note the Admin Code on your [Event Kiosk]() page (in the purple box). The default code is 1905.  
   
 Make sure that you install the drivers for your printer from the Manufacturer - not the ones that automatically are found by Microsoft or Apple (this has been known to cause the labels to print weird).  
   
 In the application you click on the gear icon on the bottom left. Enter the Admin Code, and then click on the 'Change' button next to the Label & Printer section. We've gone to great lengths to make the setup easier for you, all you need to do is select your printer and the label size. You should be able to print a 'Test' label that will include 2 thin borders, or a sample pack of each available label.  
   
-###Event Kiosk Function
+### Event Kiosk Function  
 
 General - Allows anyone to use the kiosk to attend your event
 
@@ -39,11 +40,11 @@ Service and Groups - Allows anyone to use the kiosk to attend a Service, or any 
 Only Groups - Allows anyone to use a kiosk to attend any groups meeting during a service.
 
 
-###Splash Background Image
+### Splash Background Image  
 
 You should ensure that your image is the correct size for your kiosks. It should be the same resolution as the device screen (minus the 43 pixel height of the bottom bar). The Kiosk will ensure that there is no background color showing. It will clip the either the top/bottom or left/right sides to fill the window.  
 
-###Mac Label Setup
+### Mac Label Setup  
 
 The reason that it is more difficult to get configured on a Mac is because of how the operating system handles default printer settings (instead of setting defaults by printer, it sets a default print and a default paper size). Here is one way that you should be able to work around this issue.  
 
