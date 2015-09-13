@@ -1,16 +1,37 @@
-<meta charset='utf-8'>
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 
-<title>Fresh Vine {{sectionTitle}} | {{title}}</title>
+<title>{{title}} - Fresh Vine {{sectionTitle}}</title>
 
 <!-- Spark theme mods -->
 <link href='/assets/css/style.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/49057/Dashboard/style.css?9t9e91">
 
 <!-- Meta -->
-<meta content="Fresh Vine" property="og:title">
-<meta content="Documentation for Fresh Vine, software for involvement and engagement in communities." name="description">
+<meta content="{{title}} - Fresh Vine {{sectionTitle}}" property="og:title">
+<meta content="Fresh Vine" property="og:site_name">
+<!--<meta content="" property="og:image"> -->
+<!--<meta content="{{path.base}} | {{path.dir}} | {{path.ext}} | {{path.name}} | {{path.href}}" property="og:url"> -->
+<meta content="https://freshvine.co/" property="og:see_also">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FreshVine">
+<meta name="twitter:creator" content="@FreshVineIO">
+<meta name="twitter:title" content="{{title}} - Fresh Vine {{sectionTitle}}">
+{{#if pageSocialImage}}
+<meta name="twitter:image" content="{{pageSocialImage}}">
+<meta content="{{pageSocialImage}}" property="og:image">
+{{else}}
+<meta name="twitter:image" content="https://docs.freshvine.co/assets/touch-docs-196.png">
+<meta content="https://docs.freshvine.co/assets/touch-docs-196.png" property="og:image">
+{{/if}}
+
+
+{{#if pageDescription}}
+<meta content="{{pageDescription}}" name="description">
+<meta content="{{pageDescription}}" property="og:description">
+<meta name="twitter:description" content="{{pageDescription}}">
+{{/if}}
 
 
 <!-- Fav and touch icons -->

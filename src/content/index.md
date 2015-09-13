@@ -4,6 +4,7 @@ plaidTitle: Fresh Vine Docs
 plaidSubtitle: Everything from Profiles to the API
 tocGuideSubtitle: Helping you make the most of Fresh Vine for your communtiy. Overviews, instructions, how tos and more.
 tocDevelopersSubtitle: Details about how to use the API and other engineerish things are found here.
+pageDescription: Documentation for Fresh Vine, software for increasing involvement and engagement in communities.
 template: start.hbs
 ---
 
