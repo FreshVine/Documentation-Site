@@ -27,19 +27,33 @@ One way to make the most of Fresh Vine is to create Events. A few tips:
 *	Does your event happen more than once? You might want to make Related Events! More on that next!
 
 ### Related Events  
-Related Events are essentially recurring events in Fresh Vine.
+Related Events are essentially recurring events in Fresh Vine. When you have an event that occurs week after week (or some other interval), we provide you with the ability to "extend" the event. This perpetually creates your events until a specified date.  
+
+For example: You are creating an event that meets once a week for the next six months. Your first meeting starts on the 2nd of this month (happens to be a Wednesday). You enter your event information and get to "Related Events." You want to "extend" your event to meet every week. Then select "Extend past Event by Every": *1 week* or *1 Wednesday* until (a date 6 months from now). In this case, 1 week or 1 Wednesday will produce the same result: creating your event every Wednesday for the specified time period.
 
 ### Event Outcome/Follow-up
-here. 
+Once an event has finished, you (or your group leaders) can answer preset questions, describing how the event went. This is a great way to keep track of how things are going across your community. 
+
+A few examples of questions you could use:  
+*	How did the event go?  
+*	Do you have any questions/concerns?
+*	Are there things you could do/that you need to make the event go better next time?  	
 
 ## List Events  
-here.  
+You can view all events for your whole community, as well as each group. Notice that you can filter the list of Events to find the exact one/s you're looking for.  
+We've also included a *list* or *calendar* view (at the top-right of the Events list).  
+From this Events list, you are able to quickly navigate to *view* a specific event, *edit* it, or jump right to the *Attendance* page for that event. We've tried to keep things as simple as possible for you, with the things you do most often front and center.  
+
 
 ## Events Calendar  
-here.  
+You can view all the events for a particular group, or all community-wide events in the calendar view. This can be found in the navigation, or the upper right corner of the Event List (click View Type). This is a great way to visualize everything going on in a given week.  
+
+### Subscribing to an Event Calendar  
+Coming soon.
 
 ## Event Attendance  
-here.  
+There are several ways to get to the attendance page in Fresh Vine. You may get a notification that will take you to the right page, or you may navigate there from the Event List. Either way, once you get there, there are two things to make note of. First, you can enter the total number of people who came to your event. If you just want to keep track of the general numbers, this is a great option. Second, you're able to add attendance by person.  
+Fresh Vine lists group members on Group Event Attendance pages. On community wide Events, you can add individuals by name (or use the Event Kiosk, and have them check into the event).
 
 ## Removing Events  
-You can remove or delete a single event, all future events, or all related events. 
+You can remove or delete a single event, all future events, or all related events. Removing an event will also remove all info stored with that event (attendance, and notes).
