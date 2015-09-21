@@ -30,7 +30,7 @@ Everything on a person's profile is accessible, based on the permissions you hav
 For a list of what each access level allows you access to, visit "User Group Settings" in the Admin section of your Fresh Vine.  
 
 ## Fields (options, & explaining how they work)  
-
+coming soon
 
 ## Merging Duplicate Profiles   
 *Access Required:* Community:Roster:Manage  
