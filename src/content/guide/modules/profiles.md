@@ -11,9 +11,9 @@ Your people are the heart of your community. So it’s the heart of our software
   
   
 ## What is a profile?  
-People's Profiles tell you a lot about the people in your community. The profile holds everything from their picture, address, phone number and birthday to emails they’ve received from Fresh Vine and events they have attended. 
+People's Profiles tell you a lot about the people in your community. The profile holds everything from their picture, address, phone number and birthday to emails they’ve received from Fresh Vine and events they have attended.  
 
-## Relationships
+## Relationships  
 Add a spouse, children, parents, guardians and charges from the profile edit page. When you create a relationship, it creates it on both sides - meaning you do not need to create a wife for the husband, and also create a husband for that same wife. Also, when you add children to a parent, the child will be linked to the other spouse as well, as long as you make sure to "blend into family." If the child is the child of only one of the spouses, do not blend into the family, and Fresh Vine will only place that child with the parent you're editing.  
   
 [Learn more about relationships](/guide/modules/relationships/) and how they work.  
@@ -29,16 +29,27 @@ Giving Syncing is available for spouses. You can enter giving under either spous
 Everything on a person's profile is accessible, based on the permissions you have been given. If you don’t have access to view/edit giving, you won’t see it on a member’s profile page. Most areas of Fresh Vine are modual, and are treated that way so the data you want to stay secure, does.  
 For a list of what each access level allows you access to, visit "User Group Settings" in the Admin section of your Fresh Vine.  
 
-## Fields (options, & explaining how they work)  
-coming soon
+## Fields on a Profile
+coming soon  (options, & explaining how they work)    
+  
+### Unqiue Identifiers  
+A unique Identifier allows a profile to be found and distinct from others. There are 3 identifiers Fresh Vine uses to keep things apart. For profiles these Identifiers are:
 
+*  **Fresh Vine ID** *automatically assigned when created*  
+*  **Primary Email Address**  
+*  **Mobile Phone Number**  
+  
+When importing data Fresh Vine makes the assumption that these values are unique to an individual. While there may be fringe cases where a email or phone is incorrectly entered for multiple profiles it should be avoided.  
+  
+If a couple shares a phone or email it is the best practice to enter the value for the individual who uses it most frequently. This would therefore reflect the real world usage of the contact information (who would pick up if you called).  
+  
 ## Merging Duplicate Profiles   
 *Access Required:* Community:Roster:Manage  
 Over time you will find duplicates in your list. This means that more than one profile is being used in your Fresh Vine account for the same individual. What a headache! Instead of trying to figure out what groups, events, giving, and relationships should be where, there is a merge tool.  
   
 Using this tool allows you to:  
 
-*	Select which profile data to have on the consolidated profile  
+*	Select which profile data to use on the consolidated profile  
 *	Point third-party applications to the new consolidated profile  
 *	Automatically consolidate assoicated Data:  
 	*	Additional Profile Data  
@@ -55,7 +66,7 @@ Using this tool allows you to:
 	*	Third Party Mappings  
 	*	User Accounts  
   
-It is not possible to un-merge profiles. The scale and scope of data that is consolidated makes this not possible.
+It is not possible to un-merge profiles. The scale and scope of data that is consolidated makes this not possible.  
   
 ## Status for a Profile  
 Not everyone is a part of your community in the same way. People will be active, and other times they will go dormant, or just leave outright. Since Fresh Vine does not charge based on the size of your list there is seldom a reason to remove a profile. Instead you simply change the status of a profile to indicate that they are no longer active. We provide 5 different states for any given profile.  
