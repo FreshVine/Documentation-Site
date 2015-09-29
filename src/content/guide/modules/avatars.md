@@ -14,7 +14,7 @@ An Avatar is basically a profile picture. Avatars can be used on person-profiles
 Avatars are used as the visual representation of an item. They are shown on list views, in the portal, accessible through the API, used in our Event Kiosk and show up most places the title or name is used.
 
 ## Who can change them?  
-Coming soon.  
+If you have access to the *item*, you can change the avatar. For example, if you've been given access to Groups, you can change the picture used for your group. 
 
 ## Processing the Images  
 Coming soon.  
