@@ -14,6 +14,23 @@ Our goal is to have the most simple approach to billing possible. There is a one
   
 To see our current pricing please visit the [Pricing Page on Fresh Vine](https://freshvine.co/pricing/). This will be the most up to date and current pricing we offer.  
   
+All of our rates are based on the number of involved people in your community per month.  
+  
+### Who counts as 'involved'  
+  
+One of the challenges at selling software to nonprofits like yours is the diversity in their efforts. Yet every one of these communities has an internal way to understand who is involved. We simply have decided to trust you and how you understand your community.  
+  
+The goal is to be understanding and flexible.  
+  
+### What if we don't meet monthly  
+  
+    
+  
+### Everything included at every rate  
+  
+Thats right, no matter the size of your community you get access to all of Fresh Vine.   
+  
+  
 ## How can we pay?  
   
 We accept the following credit, debit, and bank cards for payment; Visa, MasterCard, American Express, JCB, Discover, and Diners Club.  
