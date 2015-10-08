@@ -10,13 +10,19 @@ order: 1
 Fresh Vine is membership software, designed for nonprofit communities. This guide will explain the various apps, modules and settings within Fresh Vine.
 
 ## User Accounts
-You need a User Account to log into any of the Fresh Vine Apps (Leader site, Portal site, Concierge site and the Event Kiosk). User accounts are managed by the Admin(s) in your community. User accounts can be granted, suspended, or revoked as needed.  
+You need a User Account to log into any of the Fresh Vine Apps (Leader site, Portal site, Concierge site and the Event Kiosk).  
+User accounts are managed by the Admin(s) in your community.  
+User accounts can be granted, suspended, or revoked as needed.  
+User accounts need specific *access* given to them. This is done by assigning each individual User one or more Access Groups.
+
+### Access Log
+We keep an Access Log for you in Fresh Vine. This records every time a User logs into Fresh Vine. It keeps the log in the Admin section of Fresh Vine, as well as on each User's individual profile page.  
 
 ### User Access  
-Once you give someone a User Account, you also need to give them the appropriate Access. Fresh Vine is built modulally, meaning that even though you have access to see people's profiles and groups, you may not have access to see contributions. To read more about User Accounts and Access, see the Users Module.
+Once you give someone a User Account, you also need to give them the appropriate Access, via Access Groups. Fresh Vine is built modulally, meaning that even though you have access to see people's profiles and groups, you may not have access to see contributions. To read more about User Accounts and Access, see the Users Module.
  
 
-## [Profiles](../modules/profiles)
+## [Profiles](../../modules/profiles)
 Profiles are core of Fresh Vine. Profiles show you how people are involved and engaged in your community. They show events they've attended, emails they've received and read and groups they're a part of. It's your one-stop-shop to seeing the best ways you are able to engage and draw them in.
 
 
