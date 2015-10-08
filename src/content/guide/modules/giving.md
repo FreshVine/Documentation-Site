@@ -7,7 +7,7 @@ template: guide.hbs
 
 # {{title}} Module
 
-Giving in Fresh Vine 
+Giving in Fresh Vine allows you to keep track of contributions donated to your organization. You are able to enter donations (or portions of donations) under a particular designated fund. By doing this, you are able to keep your giving entries earmarked for the specific fund they were given to. These gifts directly tie to the profiles of individuals and couples. 
 
 ## Entering Giving  
 You can enter contributions into Fresh Vine from the start, but it will most likely be helpful to set up some basic configuration and templates.  
