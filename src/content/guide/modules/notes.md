@@ -6,3 +6,4 @@ template: guide.hbs
 ---
 
 # {{title}} Module
+Coming soon!

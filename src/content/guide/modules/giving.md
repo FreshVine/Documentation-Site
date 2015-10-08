@@ -6,6 +6,9 @@ template: guide.hbs
 ---
 
 # {{title}} Module
+
+Giving in Fresh Vine 
+
 ## Entering Giving  
 You can enter contributions into Fresh Vine from the start, but it will most likely be helpful to set up some basic configuration and templates.  
 
