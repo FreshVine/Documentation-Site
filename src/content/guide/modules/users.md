@@ -8,7 +8,46 @@ template: guide.hbs
 # {{title}} Module
 
 
+## User Accounts
+You need a User Account to log into any of the Fresh Vine Apps (Leader site, Portal site, Concierge site and the Event Kiosk).  
+User accounts are managed by the Admin(s) in your community.  
+User accounts can be granted, suspended, or revoked as needed (by a Fresh Vine Admin).  
+User accounts need specific *access* given to them. This is done by assigning each individual User one or more Access Groups.  
 
+
+### Access Log
+We keep an Access Log for you in Fresh Vine. This records every time a User logs into Fresh Vine. It keeps the log in the Admin section of Fresh Vine, as well as on each User's individual profile page.  
+
+### User Access  
+Once you give someone a User Account, you also need to give them the appropriate Access, via Access Groups. Fresh Vine is built modulally, meaning that even though you have access to see people's profiles and groups, you may not have access to see contributions. To read more about User Accounts and Access, see the Users Module.  
+
+We have preset Access Groups ready for you to use. However, you can create new Access Groups or change the ones that are there. (We recommend you try ours out first, to see how it fits for your community and its needs.)
+
+User Groups are not the same thing as a Group (Groups -> Create Group) you create in Fresh Vine. *User Groups* are the way we help you manage security via access/permissions for the people who are logging into your Fresh Vine.  
+
+Without an account and access, someone cannot use Fresh Vine or get any content from it. Since accounts need selected permissions before becoming active, another level of security is created for your organization's system. Keep in mind that Fresh Vine is a Leaders site, and because sensitive information may be stored, you won't want to give everyone in your community access to Fresh Vine. Keep in mind, however, that you do have the option to enable the *Portal*, which is built for your community members with limited access.  
+ 
+
+## Account Types  
+### Leader
+Leader Access allows an individual to log into your main Fresh Vine leader's site. They are then given access via Access Groups.  
+  
+### Portal
+Portal Access gives an individual access to only the Portal site (if enabeled). If a user has Leader access, they automatically get access to the Portal. However, if a user has portal access, they do not get to log into the leader's site.  
+
+## Account Status  
+*Active*: Keep users Active, who are actively involved and are using Fresh Vine.  
+
+*Suspended*: Set a User Account's Status to Suspended when they are temporarily not working with your organization. This may be because of a disciplinary action, scheduled sabbatical or any other reason of your choosing. Suspended accounts can be made Active again.  
+
+*Removed*: Removing a User Account permanently deletes the User Account. It cannot be reinstated.  
+At a later date, you can create a new User Account for that personal profile if you wish. They will have to set up their account again, however with a new username and password.  
+
+Suspending or Removing an account will disconnect any applications that user has established with the API.  
+
+## Primary Account  
+We require at least one primary account in Fresh Vine. It would be preferred to have more than one, however.  
+The person/s with a Primary Account have access to (1) manage billing information, (2) request database backups, and (3) can close your Fresh Vine account.
 
 
 ## Notifications  
