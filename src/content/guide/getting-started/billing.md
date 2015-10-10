@@ -23,12 +23,12 @@ One of the challenges at selling software to nonprofits like yours is the divers
 The goal is to be understanding and flexible.  
   
 ### What if we don't meet monthly  
-  
+That's OK! You simply need to get a rough average as to what your monthly number would be over the course of a year. If you only have one large event a year – and those who attend are the only people you consider involved – you would divide that attendance by 12. So if it’s 2,400 people you’d have an Involvement number of 200/mo.  
     
   
 ### Everything included at every rate  
   
-Thats right, no matter the size of your community you get access to all of Fresh Vine.   
+Thats right, no matter the size of your community you get access to all of Fresh Vine. No surprises - just the same rate, the same day, every month.
   
   
 ## How can we pay?  
