@@ -15,7 +15,7 @@ order: 4
 1. Enter a subject (as you would when writing an email to someone).  
 1. Write your question, issue or request in the message box. Be specific! The more details, the better. For example, if you come across something that isn't working quite right, tell us what page you're on, what you clicked on and what it's doing or what error it's giving you. This will all help us to know what's going on.  
 
-We want you to have the best experience possible, using Fresh Vine. We're committed to doing everything we can to improve what 
+We want you to have the best experience possible, when using Fresh Vine. We're committed to doing everything we can to improve on what we offer you, but it all goes better when we have your help!  
 
 
 ## Have a question?  
@@ -26,4 +26,5 @@ Use the support system!
 
 ## Have a feature request?
 Use the support system!  
+
 
