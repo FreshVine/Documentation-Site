@@ -29,7 +29,7 @@ Well, the Leaders Site really does a lot. Lets list this out quickly (this is *n
 
 ## Portal Site  
 
-The Portal Site is Fresh Vine's "public" site, where your community members can log in. They get your online directory of members (set by you), and can edit their own basic contact information, as well as those of their immediate family. 
+The Portal Site is Fresh Vine's "public" site, where your community members can log in. They get your online directory of members (set by you), and can edit their own basic contact information, as well as that of their immediate family. 
 
 ### More Details
 
