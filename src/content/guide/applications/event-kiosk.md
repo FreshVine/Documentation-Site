@@ -44,6 +44,27 @@ Only Groups - Allows anyone to use a kiosk to attend any groups meeting during a
 
 You should ensure that your image is the correct size for your kiosks. It should be the same resolution as the device screen (minus the 43 pixel height of the bottom bar). The Kiosk will ensure that there is no background color showing. It will clip the either the top/bottom or left/right sides to fill the window.  
 
+## Printing Labels
+
+
+### Testing your Printer
+![Label Config](/assets/images/event-kiosk/label_config.jpg)
+
+### Windows Label Setup
+  
+Configuring the Label Printer in Windows:  
+1.  Open the Control Panel  
+1.  Located in your Program Files menu at Accessories -> System Tools ->Control Panel  
+1.  Under the Hardware and Sound heading click on Printer  
+1.  Right click on your label printer and select Properties  
+	[If your label printer is not listed here, please install your printer]  
+1.  On the bottom of the ‘General’ tab click the button labeled ‘Printing Preferences...’  
+1.  On the lower right hand portion of this new window click the button labeled ‘Advanced...’  
+1.  This new window shows you the default settings for the printer. Set the Paper/Output -> Paper Size  
+      Dymo printers select: 30323 Shipping
+      Zebra printers select: 4.00x2.00”
+1.  Click ‘OK’ on each of the three windows to save your changes, and close the printer preferences and control panel. Your printer should now correctly set for printer paper size.
+
 ### Mac Label Setup  
 
 The reason that it is more difficult to get configured on a Mac is because of how the operating system handles default printer settings (instead of setting defaults by printer, it sets a default print and a default paper size). Here is one way that you should be able to work around this issue.  
