@@ -108,6 +108,10 @@ In the response to your ticket we will let you know the date we've set for the r
   
 We do not allow for indefinite suspension of an account. There is a real cost to maintaining the data and content.  
   
+### Our account was Removed, but...  
+  
+It sounds like you want to come back to Fresh Vine. This is awesome, but there is some bad news. Once an account is removed all the associated data is destroyed. There is nothing we can do to help you get or use the data from before. Your organization will need to setup a new account. When you setup a new account you'll also need to pay the setup fee again.
+    
 ### I charged the wrong card  
   
 Well thats a bummer. And unfortunately there isn't anything we can do for what is done. Make sure you correct the card on file in your Fresh Vine account for the next month, and that you work out a way to make a payment between your two accounts.  
