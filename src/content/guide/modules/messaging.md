@@ -87,6 +87,16 @@ There are a few reasons you may want to duplicate your message. Here are two sce
 We want you to get the most out of the Email Campaign tool, and part of that means making sure your messages reach the recipients. We've done a lot on the back-end to make sure that happens, and have given you great tools to do everything in your power to ensure it as well.  
 You can track the emails you've sent, compare your open rates with those from previous messages (both group and all-community) and compare how your community does vs. the industry standard. You can view your subscriptions, and see why certain individuals may not be receiving your messages. All of this can be found on the Email Dashboard, with links to previously sent emails.  
 
+### Troubleshooting & Tips 
+
+A great deal of time and energy has gone into making the Email Campaign system work great. We've taken care of the technical part (templates, bounce-backs, unsubscribes, sender verification, etc.), but the content is up to you. Message Content (including Subject lines and Message Previews) is one of the biggest factors in whether or not your messages are reaching inboxes and are being opened. There are a few things you need to do to ensure those awesome messages you're writing are being delivered. If you're getting members telling you they aren't receiving your messages, here are a few tips.  
+
+*  Look at your previously sent messages. Are your Subject lines & Message Preview the same? Make them different going forward!
+*  Are your Subject lines fairly generic? Or are they specific? *Make them specific!* For example, don't say "Meeting Reminder" - instead, tell them what the reminder is for - "Reminder of our upcoming annual budget meeting next Tuesday"  
+*  Make the Message Previews even more specific. For example, (using the above-mentioned budget meeting): "Tuesday November 3rd, 7pm is our annual budget meeting. Childcare provided." Making it specific doesn't ruin the "surprise" of the message body. It does two main things: 1) It helps your messages to keep from getting caught by email providers as spam or simply deleted before they were ever received, and 2) It helps your people understand what's in the message body, so they're more likely to open your message.   
+*  Deliverability is based on the content of messages, Subject lines and the Message Preview. Email providers have software in place to catch "spammy" messages (or messages *it thinks* may be spam) - and either put them in a person's spam folder - or even worse, it may simply throw those messages out completely before they get to your members' inboxes. To keep that from happening, make your content very "human" - meaning they're longer than one or two words, and they're descriptive and unique.  
+*  Make sure your Message Preview is different than the Subject. This will help with deliverability as well.  
+
 
 ## Managing/Creating Email Templates  
 Creating a template can really be as easy or as complicated as you'd like. We've tried to keep things clear, but we'll explain things below.  
