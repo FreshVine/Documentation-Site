@@ -46,6 +46,6 @@ The parents are happy. Their child has a nametag, just like all the other kids. 
 
 
 ## Who can use it?  
-who?  
+If you have a Leader's Account with access to the roster, you can make use of the Concierge. We've made it fairly accessible, because of the limited scope of what you are actually able to do in the Concierge.
 
 
