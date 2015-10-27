@@ -27,27 +27,27 @@ Your Fresh Vine Portal is automatically disabled. You need to enable it before a
 
 1.  Enable Portal (Admin - Settings - General Info). You'll find a toggle to enable or disable your portal - select what you'd like to do, and click Update Settings.  
 
-### Filter your Roster List and Invite People  
+## Filter your Roster List and Invite People  
 
 We give you the option to pick and choose who shows up in your Portal. You may have some individual community members who prefer not to be publically listed (for any variety of reasons). If you have types of people who should not be included (maybe visitors?), you can easily exclude them.  
 
-#### Filter your Roster List  
+### Filter your Roster List  
 
 1.  Select your Roster Portal Settings (Content - Portal - Roster) and click Update Roster Settings. You can exclude specific people from this page as well.  
-1.  View who is visible in the roster (Home Dashboard - on far right you'll see a button to Open the Portal). This way you're able to see who is visible in the Portal, as well as who will receive the Portal invite you'll send, if you select the "Visible In Portal" button when inviting people (more on this below).
-1.  
+1.  View who is visible in the roster (Home Dashboard - on far right you'll see a button to Open the Portal). This way you're able to see who is visible in the Portal, as well as who will receive the Portal invite you'll send, if you select the "Visible In Portal" button when inviting people (more on this below).  
+ 
 
-#### Invite People to the Portal  
+### Invite People to the Portal  
 
 Navigate to the Portal: Invite People page. Here we have several settings before you click the Invite button. First we'll take a look at the graph on the left, then the invitation settings. 
 
-##### Graph (for Portal Invites)
+#### Graph (for Portal Invites)
 
 1.  *Signed Up:* Look at the graph on this page. You'll see the updated numbers below the graph. You'll notice "Signed Up" - these are people who already have Leaders accounts with Fresh Vine - They don't need a separate login for the portal - they can get to the portal from the Home Dashboard page in the Leaders Site.  
 1.  *Invited:* This is the number of people who have been sent portal invitation notifications at least once. The bulk invite tool will send the first invitation. Extra invites need to be send from individual profile account pages.  
 1.  *Cannot Invite:* These people may not have a valid email address, or do not meet the portal registration criteria you've defined. Even though they cannot be invited by the bulk invite tool, you may still be able to invite the individually.
 
-##### Invitation Settings  
+#### Invitation Settings  
 
 How Accessible is your Portal Registration to your community? Here is a run-down of what each of these options mean. Note: You may always individually invite people from their profiles. This setting controls the target of the batch invitation tool.
 
@@ -59,14 +59,13 @@ How Accessible is your Portal Registration to your community? Here is a run-down
 1.  Include link to the portal registration in email footers:  
     *  *Include in Emails:* This link will show up as a log-in link for current users, or a sign up link for those eligible. Otherwise the link will be excluded.  
     *  *Do not Include:* This will not include the link mentioned above.  
-1.  Personal Invitation Message  
+1.  Personal Invitation Message:  You must enable this to include a custom message on your invite emails, and the registration page.  
 
-You must enable this to include a custom message on your invite emails, and the registration page.
     *  *Include this Message:* If you'd like to take a quick minute to explain to your community members what this invite is, write a short note in the box below and select to "Include this Message."  
-    *  *Do not Include:* This will omit any custom message you have written. Recipients will receive the invite without a custom message from you.  
-1.  Click *Update Settings* to save your changes.  
+    *  *Do not Include:* This will omit any custom message you have written. Recipients will receive the invite without a custom message from you.      
+Click *Update Settings* to save your changes.  
 
-##### Preview Message & Invite People!  
+#### Preview Message & Invite People!  
 
 Click the Preview Message button to show (in a pop-up box) what your message will look like to its recipients before you send it. This way, you're able to make any changes before sending the Invite to your members.   
 
