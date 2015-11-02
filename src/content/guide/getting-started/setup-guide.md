@@ -2,7 +2,7 @@
 title: Optional Setup Guide  
 template: guide.hbs
 columns: two
-order: 7
+order: 3
 ---
 
 # {{title}}  

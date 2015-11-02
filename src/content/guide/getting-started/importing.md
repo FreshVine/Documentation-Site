@@ -2,7 +2,7 @@
 title: Importing Data
 template: guide.hbs
 columns: two
-order: 3
+order: 4
 ---
 
 # {{title}}
