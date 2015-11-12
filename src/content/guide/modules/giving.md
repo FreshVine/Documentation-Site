@@ -45,7 +45,9 @@ For the foreseeable future there will be people who need us to send them hard co
 
 #### Printing Statements Tutorial Video  
   
+**Normal Video**  
 {{{youtube "https://www.youtube.com/watch?v=gWh0D8VSJgM"}}}  
+  
   
 #### Printing Statements Step by Step   
   
@@ -65,6 +67,7 @@ For the foreseeable future there will be people who need us to send them hard co
 ## Frequently Asked Questions  
   
 ### How Should we handle gifts without a donor?  
-It's normal to have a certain amount of donations that are not attributable to a specific person. This is often in the form of cash that is simply given loose as a donation. The easiest way to handle this with Fresh Vine is to create a profile that is **'Anonymous Cash'**. Then attribute all of those donations to that profile. This will allow you to properly designate/account for these contributions, let you track these loose donations over time, and allow you to create a statement of all the loose gifts. 
+It's normal to have a certain amount of donations that are not attributable to a specific person. This is often in the form of cash that is simply given loose as a donation. The easiest way to handle this with Fresh Vine is to create a profile that is **'Anonymous Cash'**.  
+Then attribute all of those donations to that profile. This will allow you to properly designate/account for these contributions, let you track these loose donations over time, and allow you to create a statement of all the loose gifts. 
   
     
