@@ -1,6 +1,6 @@
 ---
 title: Avatars
-order: 4
+order: 3
 columns: two
 template: guide.hbs
 ---

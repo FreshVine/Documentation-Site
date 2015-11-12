@@ -1,6 +1,6 @@
 ---
 title: Users
-order: 2
+order: 14
 columns: two
 template: guide.hbs
 ---

@@ -1,6 +1,6 @@
 ---
 title: Relationships
-order: 4
+order: 12
 columns: two
 template: guide.hbs
 ---

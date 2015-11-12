@@ -1,6 +1,6 @@
 ---
 title: Locations
-order: 4
+order: 7
 columns: two
 template: guide.hbs
 ---

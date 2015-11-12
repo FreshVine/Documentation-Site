@@ -1,6 +1,6 @@
 ---
 title: Profiles
-order: 3
+order: 11
 columns: two
 template: guide.hbs
 ---

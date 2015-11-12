@@ -1,6 +1,6 @@
 ---
 title: Payments
-order: 4
+order: 10
 columns: two
 template: guide.hbs
 ---

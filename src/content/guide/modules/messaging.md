@@ -1,6 +1,6 @@
 ---
 title: Messaging
-order: 5
+order: 8
 columns: two
 template: guide.hbs
 ---
