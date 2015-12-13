@@ -82,7 +82,17 @@ Sometimes it is clear that a person will not be returning to a community. It cou
 	  
 ### Deceased  
 Death is going to happen to us all, by marking someone as deceased you will maintain their history, but not have them showing up in your rosters and maps.  
-	  
+  
+**Changes when marking Deceased**  
+When a profile is moved to deceased this triggers a number of automated functions within Fresh Vine.  
+  
+*  All active relationships are ended (if an date of death was provided, it is used with their spouse relationships).  
+	*  These relationships will still be on their profile as a previous relationship.  
+*  Spouses have their relationship status changed to 'Widow'.  
+*  They are removed as leaders from any group they were leading.  
+*  Their user account is removed.  
+  
+  
 ### Removed  
 *Access Required:* Community:Roster:Manage  
 As a last resort you can remove a profile. This will not only remove profile, but also all related involvement entered into Fresh Vine. You cannot remove a profile with giving history, it is attached to a primary user account, or is attached to your user account.  
