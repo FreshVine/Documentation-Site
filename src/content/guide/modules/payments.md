@@ -6,6 +6,6 @@ template: guide.hbs
 ---
 
 # {{title}} Module  
-Also known as Online Giving, or Online Payments  
+The payments module allows you to accept and manage payments through Fresh Vine.  
   
-Coming Soon  
+More information coming soon.  
