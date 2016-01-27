@@ -147,7 +147,11 @@ For the foreseeable future there will be people who need us to send them hard co
 	(‘Mailings’ > ‘Finish & Merge’ > ‘Print Documents…’ )  
 1.  **Stuff envelops, apply postage, and mail them**  
   
+## In the Portal  
+Allowing your donors to quickly acccess, review, and see their donations can be a crucial aspect of stewardship and fundraising. This is very easy to do with Fresh Vine. By default all donations made to **tax decutible** funds will appear in the donations portion of the portal.  
   
+In addition you can also use the campaigns feature to instantly create donor reports and statements.  
+    
 ## Frequently Asked Questions  
   
 ### How Should we handle gifts without a donor?  
