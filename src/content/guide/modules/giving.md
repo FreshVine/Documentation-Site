@@ -63,13 +63,18 @@ If you wish to also print and mail statements to contributors you can do that. I
 ### Configuration  
 You can create and manage your existing campaigns by navigating to the campaign section of the giving module (People -> Giving -> Campaign).   
   
-**Title:** *(required)* Descriptive title for what this campaign is tracking. Examples: 20XX Annual Campaign, Maple Road Building Campaign, Northside Afterschool Program.  
-**Short Description:** Allows more space to describe the campaign. Appears alongside the title in most places.  
-**Date Range:** *(required)* Every campaign must have a specific start and end date.  
-**Stop Changes to Campaign:** When enabled you will not be able to change the details for this campaign. Helpful to avoid making changes by accident. *Note: If campaign funds are set to a Fund Template those funds will adjust with that template until the campaign is published.*  
-**Only Include Reconciled Contributions:** Waits until giving sets are marked as reconciled before showing them to users in the portal, or exporting them in statements.  
-**Visible in the Portal:** Should this campaign appear in the portal or not.  
-**Funds Included:** Choose if you want to use a customized selection of funds, every fund, or a fund template. Choosing every fund, or a template will keep the funds used fluid until you publish the campaign. When published, the current funds included are locked in to avoid making changes to statements.
+*  **Title:** *(required)* Descriptive title for what this campaign is tracking. Examples: 20XX Annual Campaign, Maple Road Building Campaign, Northside Afterschool Program.  
+*  **Short Description:** Allows more space to describe the campaign. Appears alongside the title in many places.  
+*  **Date Range:** *(required)* Every campaign must have a specific start and end date.  
+*  **Stop Changes to Campaign:** When enabled you will not be able to change the details for this campaign. Helpful to avoid making changes by accident. *Note: If campaign funds are set to a Fund Template those funds will adjust with that template until the campaign is published.*  
+*  **Only Include Reconciled Contributions:** Waits until giving sets are marked as reconciled before showing them to users in the portal, or exporting them in statements.  
+*  **Visible in the Portal:** Should this campaign appear in the portal or not.  
+*  **Visible to the Public:** Should this campaign be publically available.  
+*  **Funds Included:** Choose if you want to use a customized selection of funds, every fund, or a fund template. Choosing every fund, or a template will keep the funds used fluid until you publish the campaign. When published, the current funds included are locked in to avoid making changes to statements.  
+*  **Donation Graphing Period:** Should the donation graph display donations in which size segments: weekly, monthly, quarterly, or annually.  
+*  **Fund Report Ordering:** Allows the option of sorting funds from A to Z or from $$$$ to $$ in the online reports.  
+*  **Tax Exempt Notice:** There is a default notice that should be sufficent (is used when empty), but this allows you to customize one as needed.  
+`This letter serves as your receipt for tax purposes and certifies that that you did not receive any goods or services in exchange for your donation.`
    
 ### Campaign Messages  
 Every campaign can have 2 seperate messages attached to it. There is a portal message, and a statement message. Every message gets it's own directory of content on the Fresh Vine servers. This means that media and documents uploaded for one message is not accessible to others. This is done to minimize the chances of media and file being removed accidentally.  
