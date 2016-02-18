@@ -55,6 +55,43 @@ The virtual host will do two things for us.
 </VirtualHost>
 ```
 
+## Installing other Libraries
+
+    sudo npm install gulp -g
+	npm install metalsmith-markdown
+    npm install metalsmith-templates
+	npm install metalsmith-serve
+	npm install metalsmith-move-up
+	npm install metalsmith-less
+	npm install metalsmith-ignore
+	npm install metalsmith-permalinks
+	npm install metalsmith-collections
+	npm install metalsmith-clean-css
+	npm install metalsmith-define
+	npm install metalsmith-gzip
+	npm install metalsmith-paths
+	npm install metalsmith-register-partials
+	npm install handlebars
+	npm install metalsmith-register-helpers
+	npm install metalsmith-redirect
+	npm install metalsmith-copy
+	npm install metalsmith-in-place
+	npm install metalsmith-watch
+	npm install readable-stream
+	npm install metalsmith-autotoc
+	npm install metalsmith-lunr
+	npm install lunr
+	npm install metalsmith-filemetadata
+	npm install metalsmith-if
+	npm install minimatch
+	npm install apidoc
+	npm install lodash
+	npm install git-rev
+	npm install prettify
+	npm install marked
+	
+
+
 ## Starting up the Node server
 
 When in testing/development you are likely running `npm start` to get node off to the races. Yet this requires the current process in the CLI to not be stopped. Instead we will use the node module [forever](https://github.com/foreverjs/forever) which we installed above.  
