@@ -20,5 +20,12 @@ module.exports = function(link, type, args) {
 		    + args
 		    + '" width="320" height="320" frameborder="0"></iframe></span></span>';
 	}
+	else if (type == 'youtube') {
+		var r = '<span class="popupLink">'
+		    + link
+		    + '<span class = "popup"><iframe src="'
+		    + args
+		    + '" width="320" height="320" frameborder="0"></iframe></span></span>';
+	}
     return r;
 }

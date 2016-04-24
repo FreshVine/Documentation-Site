@@ -1,6 +1,6 @@
 ---
 title: Addresses
-order: 4
+order: 2
 columns: two
 template: guide.hbs
 ---

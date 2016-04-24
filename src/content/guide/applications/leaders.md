@@ -7,13 +7,19 @@ order: 2
 
 # Fresh Vine {{title}}
 
-## Leaders Site  
+
 
 The Fresh Vine Leaders Site is our bread & butter. This is most likely where Admins & Leaders in your organization will spend the majority of their time. The Leaders Site is by far the most robust application we offer, and helps you do a lot.  
 
 This is *not* a fully comprehensive list, but it will give you an overview of what is all in the Leaders Site. For more information and details on how to get these areas set up, or for questions you may have, check out the corresponding Module.  
-
+  
 ### General Info
+=======
+## A Few More Details  
+
+Well, the Leaders Site really does a lot. Lets list this out quickly (this is *not* a fully comprehensive list):  
+
+### General  
 
 *  Use the Leaders Site easily on any computer or mobile device! We have built the software to be *responsive* - essentially meaning it changes and responds to whatever size device you're using.  
 *  Submit Support Tickets, whether they're for bugs, feature requests or just a question!

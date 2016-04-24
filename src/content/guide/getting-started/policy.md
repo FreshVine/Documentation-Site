@@ -2,7 +2,7 @@
 title: Policy Brief
 template: guide.hbs
 columns: two
-order: 6
+order: 7
 ---
   
 # Important Policies Overview 

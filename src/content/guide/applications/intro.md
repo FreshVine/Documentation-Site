@@ -40,6 +40,17 @@ The Portal Site is Fresh Vine's "public" site, where your community members can 
 *  More features will be added in the future. Stay tuned!   
 
 
+## Event Kiosk  
+
+The Event Kiosk is a great tool to use for your events. It allows you to check people in to your events, with or without internet access. *With* internet access, it instantly syncs with the Fresh Vine Leaders Site to make sure your attendance is saved, and your work is done.  
+
+### More Details  
+
+*  Check people into specific Classes or Services with the Kiosk.  
+*  Connect a label printer to easily print nametags, claim tickets and bag tags for your members.  
+*  Without internet access, use all functions of the Event Kiosk! Simply connect your computer to the internet later, and sync the data with the Fresh Vine Leaders Site.  
+
+
 ## Concierge Site  
 
 The Concierge Site is a simple, but can be an extremely useful tool for your community. The Concierge Site is most useful in conjunction with Services and the Event Kiosk, but can be used on its own as well. With the Concierge, you're able to add new individuals, families, view who is checked in to which class, and quickly search for members.  
@@ -51,16 +62,6 @@ The Concierge Site is a simple, but can be an extremely useful tool for your com
 *  Quickly search for members in your community. This will give you a member's basic information, as well as which class they may be checked into.  
 *  Use the Concierge Site to help your check-in process using the Event Kiosk go much smoother with new visitors. *For example:* If new families come to your Service and they'd like thier kids to join the other kids in a class, simply add them via the Concierge Site. Walk them over to the Event Kiosk and practically instantly, they're added to Fresh Vine and will be available to be checked in using the Event Kiosk. Now when you check them in, the child gets a nametag printed that looks just like all the other kids' nametags.  
 
-
-## Event Kiosk  
-
-The Event Kiosk is a great tool to use for your events. It allows you to check people in to your events, with or without internet access. *With* internet access, it instantly syncs with the Fresh Vine Leaders Site to make sure your attendance is saved, and your work is done.  
-
-### More Details  
-
-*  Check people into specific Classes or Services with the Kiosk.  
-*  Connect a label printer to easily print nametags, claim tickets and bag tags for your members.  
-*  Without internet access, use all functions of the Event Kiosk! Simply connect your computer to the internet later, and sync the data with the Fresh Vine Leaders Site.  
 
 
 ## API  

@@ -1,6 +1,6 @@
 ---
 title: Social Media
-order: 4
+order: 13
 columns: two
 template: guide.hbs
 ---

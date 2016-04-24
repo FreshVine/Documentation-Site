@@ -1,6 +1,6 @@
 ---
 title: Notes
-order: 7
+order: 9
 columns: two
 template: guide.hbs
 ---

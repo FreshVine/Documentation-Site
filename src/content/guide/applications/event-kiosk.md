@@ -1,8 +1,8 @@
 ---
-title: Event Kiosk
+title: Event Kiosk App
 columns: two
 template: guide.hbs
-order: 5
+order: 4
 ---
 
 # Fresh Vine {{title}}

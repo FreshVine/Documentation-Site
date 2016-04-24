@@ -2,7 +2,7 @@
 title: Concierge Site
 columns: two
 template: guide.hbs
-order: 4
+order: 5
 ---
 
 # Fresh Vine {{title}}
