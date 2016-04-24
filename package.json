@@ -1,11 +1,11 @@
 {
-  "name": "particle-docs",
+  "name": "freshvine-docs",
   "version": "0.3.0",
   "private": false,
   "license": "CC-BY-SA-3.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/spark/docs.git"
+    "url": "git://github.com/freshvine/Documentation-Site.git"
   },
   "scripts": {
     "start": "node ./scripts/server.js",
