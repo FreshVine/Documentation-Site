@@ -35,7 +35,7 @@ If you are asking for databases on regular and/or frequent intervals we will cea
   
 Your data & content is retained for every account after its closure. This is the period where an account may be re-opened and have all their data and content in place. Accounts that are closed do not have access to their data. If you need access to your data you will need to re-open your account.  
   
-*  **Trials** - 7 days after account was locked  
+*  **Trials** - 14 days after the trial expires  
 	*A trial account is any account which never entered payment information*  
   
 *  **Subscribed** - 90 days after account was locked  
@@ -74,12 +74,12 @@ Your account is prohibited from using Fresh Vine to send spam. Doing so can resu
 A subdomain is the URL used to access a Fresh Vine account. `Demo` would be the subdomain for https://demo.freshvine.co/. One subdomain is reserved for every account in Fresh Vine to use for accessing their content. A subdomain is reserved during the sign up (staging) process, and is used throughout the life of an account. These are allocated on a first come first serve basis. We release subdomains in line with our Data Retention policy with 2 unique caveats.  
 
 *  **Staging** - 72 hours since the last change
-*  **Trials** - 7 Days after locked down
+*  **Trials** - 14 Days after trial expires
 *  **Subscribed** - 90 days after account was locked
 *  **After a Subdomain Change** - 45 days after new subdomain is implemented.
   
 ## Right to Refuse  
   
-While we have yet to refuse service to any community - we reserve this right. We will only exercise this right against organizations that are explicitly hateful. We believe that discourse, and diversity. That unpopular opinions might change the world for better. Holding unpopular opinions is not hateful. Explicit and directed statements of violence may see accounts closed.  
+While we have yet to refuse service to any community - we reserve this right. We will only exercise this right against organizations that are explicitly hateful. We believe in discourse, and diversity. That unpopular opinions might change the world for better. Holding unpopular opinions is not hateful. Explicit and directed statements of violence may see accounts closed.  
   
 At the end of the day we built and maintain this platform so that communities can transform their corners of the world.  
