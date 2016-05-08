@@ -94,6 +94,11 @@ Upon restarting your service your card will be billed instantly for the upcoming
   
 ## Common Questions  
   
+### Billing my card failed, what happens now?  
+Every account it billed on the day they started their subscription to Fresh Vine each month. If your card fails to process it will be tried the next day, and then three days after that. At any point before the third attempt your card is successfully processed everything is grand.  
+  
+However if the card is not processed then your subscription will be canceled. You can restart your subscription from your login page at any point prior to the data being removed.  
+  
 ### Can I get a Refund?  
   
 We do not provide refunds. Fresh Vine is a service that is provided as is. Your monthly subscription gives you access to this service after you pay for it. This approach ensures that we both receive exactly what is expected. As a subscriber you receive a month of access to Fresh Vine and all that includes. As the provider we are paid for the service we are providing.  
