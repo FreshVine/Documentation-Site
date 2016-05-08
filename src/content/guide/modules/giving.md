@@ -28,15 +28,19 @@ If you select a service (needs to be set up prior to entering giving - or right 
 You can also select a Template from this page, narrowing down the fund categories you've entered. 
 
 ## Configuration  
-This is a very simple system at its core. Many of the different components that go into a giving set are customizable. This allows you to define the methods, and funds that are used. //TODO: FINISH   
+This is a very simple system at its core. Many of the different components that go into a giving set are customizable. This allows you to define the methods, and funds that are used.  
   
 ### Funds  
+Every donation is made to a fund, or funds. Every organization has their own set of designations used to account for their various programs and expenses. You are able to enter as many funds as you require and supply each of them with a description to provide any clarity required. These funds will then be avaiable to use for the giving module (entry, campaigns, reports, statements).  
+  
+Once a fund has contributions entered you are not able to removed it. This is to avoid reporting issues with those donations no longer mapped to a fund they would fail to appear. As a best practice you should not have annual funds in Fresh Vine. Instead use the reporting features to view the contributions to a given fund/s over a desired period of time.    
   
 ### Methods  
 By setting up just a few basic things, it will make each time you enter contributions go much smoother.  
 
 You have the option to set whether you enter giving by name or (to set) a Giving ID number. Your community members can also give online, via our giving partners (read more about that in 'Online Payments'). You're also able to set an unlimited number of Giving Funds. *Giving Funds* are the specific earmarked pools of money that people contribute to. For example, you may have a fund set up to keep track of a building fund, and others to keep track of benevolence, a community outreach, or contributions to a partnering homeless shelter or program. The possibilities are endless. What your community can do is endless. We just help you keep track of it all.  
-Once you have your funds entered, you'll want to create *Templates* to help you organize the funds, and be able to enter your contributions even faster.  
+Once you have your funds entered, you'll want to create *Templates* to help you organize the funds, and be able to enter your contributions even faster.   
+  
   
 ## Campaigns  
 Much of the contributions made to your organization will be a part of a campaign. Fresh Vine supports loosely tracking contributions by campaign. This means that a given set of contributions is not bound to a campaign, but rather is included because it matched the criteria set for that campaign. The goal is to ensure every gift that meets the campaign criteria is included in that campaign.  
