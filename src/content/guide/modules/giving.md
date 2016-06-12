@@ -39,7 +39,19 @@ Once a fund has contributions entered you are not able to removed it. This is to
 By setting up just a few basic things, it will make each time you enter contributions go much smoother.  
 
 You have the option to set whether you enter giving by name or (to set) a Giving ID number. Your community members can also give online, via our giving partners (read more about that in 'Online Payments'). You're also able to set an unlimited number of Giving Funds. *Giving Funds* are the specific earmarked pools of money that people contribute to. For example, you may have a fund set up to keep track of a building fund, and others to keep track of benevolence, a community outreach, or contributions to a partnering homeless shelter or program. The possibilities are endless. What your community can do is endless. We just help you keep track of it all.  
-Once you have your funds entered, you'll want to create *Templates* to help you organize the funds, and be able to enter your contributions even faster.   
+Once you have your funds entered, you'll want to create *Templates* to help you organize the funds, and be able to enter your contributions even faster.  
+  
+## Online Giving & Giving Pages  
+Once your Fresh Vine account is connected to one of our Payment Partners (see Payments) you can enable Online Giving.  
+
+
+### Tips & Tricks
+  
+#### Embeding Videos  
+If you've published a video online somewhere and wish to use it on your page simply grab the supplied embed code from the site it was published on. If it gives you options of sizing, please choose the largest size.   
+    
+#### Full Width Content  
+You might want your content to be the full width of the content area. You can do this by adding the class `noPadding` to the parent element. This will expand that element to the full width by undoing the padding. All other content will still have the white border.
   
   
 ## Campaigns  
