@@ -15,21 +15,21 @@ For the sake of this section please understand **Data** to mean information stor
   
 ### Backup & Management  
   
-Loosing data is the worst. We are hyper vigilant to ensure we don't loose anything. All of your Data and Content is stored on duplicated servers with regular backups. Data is backed up on a daily basis, and Content on an ongoing basis.  
+Losing data is the worst. We are hyper vigilant to ensure we don't loose anything. All your Data and Content is stored on duplicated servers with regular backups. Data is backed up on a daily basis, and Content on an ongoing basis.  
   
 These backups will not be used for user errors or to recover content removed by users. Instead they are maintained to ensure we never loose any of your data to hardware or software failure.  
   
 ### Requesting your Database  
   
-We believe that all the data in Fresh Vine is yours. While it won't work too well without an active Fresh Vine account we will give it to you whenever asked for. This can be helpful for external projects, or if your moving to a different membership platform. There is no support provided for the structure of the database or what will become of the data. Fresh Vine will never restore data from a backup supplied to a customer.  
+We believe that all the data in Fresh Vine is yours. While it won't work too well without an active Fresh Vine account, we will give it to you whenever asked for. This can be helpful for external projects, or if you're moving to a different membership platform. There is no support provided for the structure of the database or what will become of the data. Fresh Vine will never restore data from a backup supplied to a customer.  
   
-***Please Note*** that we will never restore an account from a database back up given to a customer.  We maintain our own backups incase of system failure. Once data is supplied to a request it in no longer our responsibility and is out of our control.  
+***Please Note*** that we will never restore an account from a database back up given to a customer.  We maintain our own backups incase of system failure. Once data is supplied to a request, it is no longer our responsibility and is out of our control.  
   
 #### Who can ask for our Database    
   
 Only primary user accounts may have their requests for a database fulfilled. We do our best to respond to these requests within a few days. You can make a request for the data to be sent directly to a third party - simply include the contact information for whom we should send the data. One of our engineers will fulfill your request.  
   
-If you are asking for databases on regular and/or frequent intervals we will cease fulfilling your requests. The alternative, if you need regular access to data, is to use our API through the developers site at [FreshVine.io](https://freshvine.io/).  
+If you are asking for databases on regular and/or frequent intervals we will stop fulfilling your requests. The alternative, if you need regular access to data, is to use our API through the developers site at [FreshVine.io](https://freshvine.io/).  
   
 ### Retention of Data & Content  
   
@@ -80,6 +80,6 @@ A subdomain is the URL used to access a Fresh Vine account. `Demo` would be the 
   
 ## Right to Refuse  
   
-While we have yet to refuse service to any community - we reserve this right. We will only exercise this right against organizations that are explicitly hateful. We believe in discourse, and diversity. That unpopular opinions might change the world for better. Holding unpopular opinions is not hateful. Explicit and directed statements of violence may see accounts closed.  
+While we have yet to refuse service to any community - we reserve this right. We will only exercise this right against organizations that are explicitly hateful. We believe in discourse and diversity, that unpopular opinions might change the world for better. Holding unpopular opinions is not hateful. Explicit and directed statements of violence may see accounts closed.  
   
 At the end of the day we built and maintain this platform so that communities can transform their corners of the world.  
