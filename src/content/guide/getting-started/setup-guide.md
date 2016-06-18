@@ -11,6 +11,13 @@ Don’t know where to begin? Here’s a suggestion of how to get your Fresh Vine
 
 This guide will recommend a place to start (and where to go in your Fresh Vine to do it). Use the rest of the Docs to better understand each section. This guide is not comprehensive - just a place to start.
 
+## Basic Customizing  
+
+We want to make sure Fresh Vine is tailored to your community as best as possible. The first thing we suggest to do is to "customize" some basic things - address, people types, group categories, giving funds & templates and your logo. For information on where to do this and why, see "Customizing Fresh Vine" under "Getting Started" here in the guide.  
+
+Once these basic things are set (should only take a few minutes), move on to the following steps for further instruction/customization.  
+
+
 ## Admin Setup
 ### What is in the Admin section?
 The Admin section of Fresh Vine is only accessible to Administrators of your community. The Admin section is where most of the customization of the software is set, to make Fresh Vine as a whole, more useful to you, and how your organization runs.  
@@ -31,6 +38,16 @@ Groups can be used for small or large groups that meet, staff groups, volunteer 
 1. Create a Group that meets in your organization (Groups - All Groups - Create Group).  
 1. Once that group is created, take a look around - you can add members to it, make a few of them group-leaders, create group events, send a group email and more.  
 1. If this group is a *class* that meets during a service, select class so you can set the Kiosk settings for that particular group. 
+
+### Group Event  
+Group events are a great way to really make the most of "Groups" in Fresh Vine. Groups are great for keeping track of who is a member in that group, send messages to the group and keep notes. Group *Events* allow you to set when/where that group meets, and keep attendance (also required for use with the Event Kiosk). One reason for needing to create group events, (rather than just having one default event per group) is that you may have groups that meet for several reasons. Maybe on Mondays a group meets to tutor kids in the community, but they also meet the first Thursday of the month to plan events. Create an Event for your Monday happenings, and another for your Thursday meetings. Separate events, same group.  
+
+1. When on a group page, click the green + Event button, or select Add Event from the menu (Groups - Events - Add Event).
+1. Title the Event, set a date.
+1. If your event is a recurring event, select "Yes" to Related Events - Extend this Event. Here you can set the frequency.
+1. If you want to use the Event Kiosk, click Enabled and set your settings. 
+1. Once your event is created and it's time for your event to start, the leaders of the group will get a notification to take attendance for that event (as long as they have a Leaders Account).
+
 
 ## Services  
 If your organization has services (large meetings where the whole organization is welcome) on a regular basis, its a good idea to set up your services. With Services, you can keep attendance numbers, keep giving records associated with a service, set groups to meet during the service, and use the Event Kiosk to check people in and print name tags.  
