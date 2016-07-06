@@ -31,15 +31,30 @@ For a list of what each access level allows you access to, visit "User Group Set
 
 ## Fields on a Profile
 coming soon  (options, & explaining how they work)    
+### Contact Information  
+Here is where you can set phone numbers, email addresses and websites for individuals. Try to keep from duplicating these on multiple profiles. For example, if a husband and wife share an email address, only enter it for one of the spouses. If they both have the same email address listed and you send an email, they will get two, as Fresh Vine sends to each individual with an email address, regardless of if they're duplicates.  
+
+Why set contact information? So you can quickly, at the touch of a button, call or email that individual, without needing to copy/paste the information.  
+
+### Address  
+We allow for 3 addresses to be stored for each individual - home, work and other. Keeping their address in Fresh Vine allows you to see at a glance where they live, what part of town they're in, and who lives nearby.  
+
+### Relationships  
+By connecting individuals in relationships, you gain access to valuable features in Fresh Vine. Beside the obvious (seeing who is in their family, with links to their profiles), here are a few situations Relationships are used within Fresh Vine:  
+
+*  You can set Fresh Vine to automatically send Anniversary emails to couples with anniversaries in the system.
+*  Planning a marriage-related event, and need to see who is married? You can filter your roster list by those who are married.  
+*  Have small children in classes or groups, and need to email all the parents? When sending an email to the group, you can filter the group *email list* to just email the *parents* of the children in the group!  
+
   
-### Unqiue Identifiers  
+## Unqiue Identifiers  
 A unique Identifier allows a profile to be found and distinct from others. There are 3 identifiers Fresh Vine uses to keep things apart. For profiles these Identifiers are:
 
 *  **Fresh Vine ID** *automatically assigned when created*  
 *  **Primary Email Address**  
 *  **Mobile Phone Number**  
   
-When importing data Fresh Vine makes the assumption that these values are unique to an individual. While there may be fringe cases where a email or phone is incorrectly entered for multiple profiles it should be avoided.  
+When importing data Fresh Vine makes the assumption that these values are unique to an individual. While there may be fringe cases where a email or phone is entered for multiple profiles, it should be avoided.  
   
 If a couple shares a phone or email it is the best practice to enter the value for the individual who uses it most frequently. This would therefore reflect the real world usage of the contact information (who would pick up if you called).  
   
