@@ -190,48 +190,46 @@ exports.build = function(callback) {
 exports.server = function(callback) {
 	environment = 'development';
 	// environment = 'production';
-		exports.metalsmith().use(serve())
-		.use(msIf(
-			environment === 'development',
-			watch({
-				paths: {
-					"${source}/content/**/*": "**/*",	// Rebuild Everything
-					"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
-					"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
-					"${source}/assets/images/**/*" : true,	// Just build that image
-					"../templates/**/*": "**/*"	// Rebuild Everything
-					// "${source}/content/**/*.md": true,
-					// "${source}/assets/less/*.less": "assets/less/*.less",
-					// "../templates/reference.hbs": "content/developers/**/*.md",
-					// "../templates/guide.hbs": "content/guide/**/*.md",
-					// "../templates/start.hbs" : "content/index.md",
-					// "${source}/assets/js/*.js" : true,
-					// "${source}/assets/images/*" : true
-				},
-				livereload: true
-			})
-		))
-		.use(msIf(
-			environment === 'production',
-			watch({
-				paths: {
-					"${source}/content/**/*": "**/*",	// Rebuild Everything
-					"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
-					"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
-					"${source}/assets/images/**/*" : true,	// Just build that image
-					"../templates/**/*": "**/*"	// Rebuild Everything
-				},
-				lifereload: true
-			})
-		))
-		.build(function(err, files) {
-			if (err) {
-				console.error(err, err.stack);
-			}
-			if (callback) {
-				callback(err, files);
-			}
-		});
-
+	exports.metalsmith().use(serve())
+	.use(msIf(
+		environment === 'development',
+		watch({
+			paths: {
+				"${source}/content/**/*": "**/*",	// Rebuild Everything
+				"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
+				"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
+				"${source}/assets/images/**/*" : true,	// Just build that image
+				"../templates/**/*": "**/*"	// Rebuild Everything
+				// "${source}/content/**/*.md": true,
+				// "${source}/assets/less/*.less": "assets/less/*.less",
+				// "../templates/reference.hbs": "content/developers/**/*.md",
+				// "../templates/guide.hbs": "content/guide/**/*.md",
+				// "../templates/start.hbs" : "content/index.md",
+				// "${source}/assets/js/*.js" : true,
+				// "${source}/assets/images/*" : true
+			},
+			livereload: false
+		})
+	))
+	// .use(msIf(
+	// 	environment === 'production',
+	// 	watch({
+	// 		paths: {
+	// 			"${source}/content/**/*": "**/*",	// Rebuild Everything
+	// 			"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
+	// 			"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
+	// 			"${source}/assets/images/**/*" : true,	// Just build that image
+	// 			"../templates/**/*": "**/*"	// Rebuild Everything
+	// 		},
+	// 		lifereload: true
+	// 	})
+	// ))
+	.build(function(err, files) {
+		if (err) {
+			console.error(err, err.stack);
+		}
+		if (callback) {
+			callback(err, files);
+		}
+	});
 };
-
