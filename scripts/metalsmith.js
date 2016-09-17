@@ -1,3 +1,5 @@
+'use strict';
+
 var Metalsmith = require('metalsmith');
 var markdown = require('metalsmith-markdown');
 var templates = require('metalsmith-templates');
@@ -8,7 +10,6 @@ var ignore = require('metalsmith-ignore');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var cleanCSS = require('metalsmith-clean-css');
-var define = require('metalsmith-define');
 var compress = require('metalsmith-gzip');
 var paths = require('metalsmith-paths');
 var partials = require('metalsmith-register-partials');
@@ -25,7 +26,6 @@ var fileMetadata = require('metalsmith-filemetadata');
 var msIf = require('metalsmith-if');
 var precompile = require('./precompile');
 var apidoc = require('./apidoc');
-var git = require('git-rev');
 
 var handlebars = require('handlebars');
 var prettify = require('prettify');
@@ -39,12 +39,12 @@ marked.InlineLexer.rules.gfm.url = noop;
 
 var environment;
 
-var gitBranch;
-
 exports.metalsmith = function() {
-  var _removeEmptyTokens = function removeEmptyTokens(token) {
-    if (token.length > 0) {return token;}
-  };
+	function removeEmptyTokens(token) {
+		if (token.length > 0) {
+			return token;
+		}
+	};
   var metalsmith = Metalsmith(__dirname)
     .concurrency(100)
     .source("../src")
@@ -71,18 +71,8 @@ exports.metalsmith = function() {
     .use(partials({
       directory: '../templates/partials'
     }))
-    // .use(fileMetadata([
-    //   {pattern: "content/**/*.md", metadata: {"lunr": true, "assets": '/assets', "branch": gitBranch}}
-    // ]))
-    // .use(msIf(
-    //   environment === 'development',
-    //   fileMetadata([
-    //     {pattern: "content/**/*.md", metadata: {"development": true}}
-    //   ])
-    // ))
     .use(fileMetadata([
-      {pattern: "content/**/*.md", metadata: { "assets": '/assets'}}
-      // {pattern: "content/**/*.md", metadata: { "lunr": true, "assets": '/assets'}}
+      {pattern: "content/**/*.md", metadata: { "lunr": true, "assets": '/assets'}}
     ]))
     .use(precompile({
       directory: '../templates/precompile',
@@ -134,18 +124,6 @@ exports.metalsmith = function() {
       selector: 'h2, h3',
       pattern: '**/**/*.md'
     }))
-	.use(lunr({
-		ref: 'title',
-		indexPath: 'search-index.json',
-		fields: {
-			contents: 1,
-			title: 10
-		},
-		preprocess: function(content) {
-			// Replace all occurrences of __title__ with the current file's title metadata.
-			return content.replace(/__title__/g, this.title);
-		}
-	}))
     .use(templates({
       engine: 'handlebars',
       directory: '../templates'
@@ -165,62 +143,87 @@ exports.metalsmith = function() {
       '/guide/getting-started': '/guide/getting-started/overview'
     }));
 
+	metalsmith.use(lunr({
+		indexPath: 'search-index.json',
+		fields: {
+			contents: 1,
+			tags: 10
+		},
+		pipelineFunctions: [
+			removeEmptyTokens
+		]
+	}));
+
   return metalsmith;
 };
 
 
-// exports.build = function(callback) {
-//   git.branch(function (str) {
-//     gitBranch = process.env.TRAVIS_BRANCH || str;
-//     exports.metalsmith().build(function(err, files) {
-//       if (err) { throw err; }
-//       if (callback) {
-//         callback(err, files);
-//       }
-//     });
-//   });
-// };
+exports.compress = function(callback) {
+  Metalsmith(__dirname)
+    .clean(false)
+    .concurrency(100)
+    .source('../build')
+    .destination('../build')
+    .use(compress({
+      src: ['search-index.json'],
+      overwrite: true
+    }))
+    .build(callback);
+};
+
+exports.build = function(callback) {
+    exports.metalsmith()
+      .use(compress({
+        src: ['search-index.json'],
+        overwrite: true
+      }))
+      .build(function(err, files) {
+        if (err) {
+          throw err;
+        }
+        if (callback) {
+          callback(err, files);
+        }
+      });
+};
 
 exports.server = function(callback) {
 	environment = 'development';
 	// environment = 'production';
-	// git.branch(function (str) {
-		// gitBranch = process.env.TRAVIS_BRANCH || str;
 		exports.metalsmith().use(serve())
-		// .use(msIf(
-		// 	environment === 'production',
-		// 	serve({
-		// 		port: 8080
-		// 	})
-		// ))
 		.use(msIf(
 			environment === 'development',
 			watch({
 				paths: {
-					"${source}/content/**/*.md": true,
-					"${source}/assets/less/*.less": "assets/less/*.less",
-					"../templates/reference.hbs": "content/developers/**/*.md",
-					"../templates/guide.hbs": "content/guide/**/*.md",
-					"../templates/start.hbs" : "content/index.md",
-					"${source}/assets/js/*.js" : true,
-					"${source}/assets/images/*" : true
+					"${source}/content/**/*": "**/*",	// Rebuild Everything
+					"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
+					"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
+					"${source}/assets/images/**/*" : true,	// Just build that image
+					"../templates/**/*": "**/*"	// Rebuild Everything
+					// "${source}/content/**/*.md": true,
+					// "${source}/assets/less/*.less": "assets/less/*.less",
+					// "../templates/reference.hbs": "content/developers/**/*.md",
+					// "../templates/guide.hbs": "content/guide/**/*.md",
+					// "../templates/start.hbs" : "content/index.md",
+					// "${source}/assets/js/*.js" : true,
+					// "${source}/assets/images/*" : true
 				},
 				livereload: true
 			})
 		))
-		// .use(msIf(
-		// 	environment === 'production',
-		// 	watch({
-		// 		paths: {
-		// 			"${source}/content/**/*": "**/*",	// Rebuild Everything
-		// 			"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
-		// 			"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
-		// 			"${source}/assets/images/**/*" : true,	// Just build that image
-		// 			"../templates/**/*": "**/*"	// Rebuild Everything
-		// 		},
-		// 		lifereload: false
-		// 	})
-		// ))
+		.use(msIf(
+			environment === 'production',
+			watch({
+				paths: {
+					"${source}/content/**/*": "**/*",	// Rebuild Everything
+					"${source}/assets/less/**/*": "**/*",	// Rebuild Everything
+					"${source}/assets/js/**/*" : "**/*",		// Rebuild Everything
+					"${source}/assets/images/**/*" : true,	// Just build that image
+					"../templates/**/*": "**/*"	// Rebuild Everything
+				},
+				lifereload: true
+			})
+		))
 		.build(function(err, files) {
 			if (err) {
 				console.error(err, err.stack);
@@ -229,5 +232,6 @@ exports.server = function(callback) {
 				callback(err, files);
 			}
 		});
-  // });
+
 };
+

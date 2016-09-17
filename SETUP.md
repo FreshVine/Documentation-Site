@@ -63,6 +63,10 @@ Ideally you should be able to get all of the correct libraires and their dependa
 
 If you run into errors with a particular library not being install then you can use a more manual approach below. The disadvantage here is that you might not install the correct version of these libraries. When you finish with the manual install you should run the `npm install` again to catch any issues.
 
+If you continue to have issues, in particular with `contextify` not working, you should reinstall npm using the following command.
+
+    sudo npm install -g npm
+
 ### Manually install Libraries
 
     sudo npm install gulp -g

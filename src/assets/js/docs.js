@@ -212,27 +212,42 @@ Created by Zach Supalla.
     });
   };
 
+  Docs.checkIfGuideScrollbar = function() {
+    var $contentInner = $('.content-inner')[0];
+    if($contentInner) {
+      if($contentInner.scrollHeight > $contentInner.clientHeight) {
+        $('.arrow.next-arrow').css('margin-right', '15px');
+      }
+    }
+  };
+
 
   Docs._removeEmptyTokens = function removeEmptyTokens(token) {
-    if (token.length > 0) {return token};
+    if (token.length > 0) { return token; }
   };
+
+
+  /**
+   * Manage the use of lunrjs search tool
+   */
 
   Docs.resultsAdded = 0;
 
   Docs.buildSearch = function() {
+    if (typeof lunr === 'undefined') {
+      return;
+    }
     lunr.Pipeline.registerFunction(Docs._removeEmptyTokens, 'removeEmptyTokens');
 
-	// TODO: Get LUNR and the search working
     $.getJSON('/search-index.json', function(data) {
       var store = data.store;
       var idx = lunr.Index.load(data.index);
       $('input.search-box').keyup(function() {
         var searchQuery = this.value;
         Docs.emptyResults();
-        if(searchQuery === '' || searchQuery.length < 3) {
+        if (searchQuery === '' || searchQuery.length < 3) {
           $('.search-results').hide();
-        }
-        else {
+        } else {
           $('.search-results').show();
           var results = idx.search(searchQuery);
           Docs.buildSearchResults(results, store);
@@ -253,22 +268,21 @@ Created by Zach Supalla.
   };
 
   Docs.titleize = function(string) {
-    var stringNoDashes = string.replace(/-/g, ' ');
-    var stringToTitleCase = stringNoDashes.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-    return stringToTitleCase;
-  }
+	var stringNoDashes = string.replace(/-/g, ' ');
+	var stringToTitleCase = stringNoDashes.replace(/\w\S*/g, function(txt){
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	});
+	return stringToTitleCase;
+  };
 
   Docs.buildSearchResults = function(results, store) {
-    var htmlToAppend = '';
-
     var fiveResults = results.slice(0,5);
 
     var niceResults = fiveResults.map(function(r) {
       var resultInfo = store[r.ref];
-      var nr = {}
-      nr.link = r.ref;
+      var nr = {};
+      nr.link = r.ref.replace(/index\//g, '');
       nr.title = resultInfo.title;
-      nr.device = resultInfo.device;
       nr.collection = Docs.titleize(resultInfo.collection);
       nr.pageTitle = resultInfo.pageTitle;
       nr.collectionClass = resultInfo.collection;
@@ -278,6 +292,10 @@ Created by Zach Supalla.
     var html = Handlebars.templates.search({results: niceResults});
     $('.search-results').append(html);
   };
+
+  /**
+   * Manage the search tool
+   */
 
   Docs.toggleShowing = function() {
     $("span.popupLink, span.footnoteLink").on('click', function() {
@@ -301,26 +319,19 @@ Created by Zach Supalla.
     }
   };
 
-  Docs.scrollNavOnload = function(){	// Scroll the side menu to the current value
-	  if( $('.menubar').is('.menu-visible')){
-		  $('.menubar').animate({
-	          scrollTop: $(".top-level.active").offset().top - $('.header').height() - 50
-	      }, 0);
-	  }
-  }
 
   $(window).resize(Docs.addMenubarClass);
+ 
 
   // Ok, then let's do it!
+  Docs.addMenubarClass();
   Docs.transform();
   Docs.setupTOCScrollSpy();
   Docs.scrollToInternalLinks();
   Docs.watchToggleInPageNav();
   Docs.watchToggleSecondaryInPageNav();
-  Docs.checkIfGuideScrollbar();
   Docs.buildSearch();
   Docs.toggleNav();
   Docs.toggleShowing();
   prettyPrint();
-
 })(jQuery);
