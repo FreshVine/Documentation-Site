@@ -12,17 +12,65 @@ Most of Fresh Vine requires a user account to access. This makes the creation an
 Every person should use their own user account. There is no limit to the number of users that you can have with your Fresh Vine account. Avoid user accounts designed to be shared with a group of people. These are personal user account. Don't share!  
   
 **There are 2 types of Accounts:** Portal and Leader.
+
+## Signing Into Fresh Vine
+You can sign into your Fresh Vine account by using the 
+![Fresh Vine Login Screen](/assets/images/users/login-screen.png)  
+
+
+## Forgetting your Password
+This will eventually happen to people in your organization. There are two ways to reset a password. The user can either do it themselves, or you can do it for them.
+
+### Resetting my own Password
+On any of the login forms you will see a button beneath the login button that says 'Forgot my Password'. Clicking that link will activate the forgotten password form. This allows you to submit your email address and then Fresh Vine will send you a one-time use reset password link. This link must be used within 2 hours (if you are outside of that 2 hour window a new link will be sent to you).  
+
+*If the email does not show* you should contact an administrator for your organization who can find the link you need on the 'User Account' page of your profile. Providing that link to them over email, or messaging will allow them to reset their password.
+  
+The page that the email links you to will only have one field for your password. Enter what you would like your password to be an it will be updated, and you will be logged into Fresh Vine. You should be sent to whatever content you were attempting to access during your initial login.
+
+
+If you are already logged in you can update your password by editing your account.   
+  
+### Resetting Another Users Password
+If you have the ability to manage user accounts then you can reset passwords for users. We discourage this practice, but you simply navigate to the 'User Account' page of their profile. When you click on the **Edit Account** button the modal which loads will allow you to manage their account. This includes the ability to define a password for them. When resetting a password for someone over the phone it is helpful to give them a simple to remember phrase like "goldfishcrackers".  
+  
+Encourage these users to change their password after they log in. When possible do not send any user passwords over email, or messaging services. If you must do not also include or reference their username.  
   
 ## Portal Accounts
 These are the main user accounts for Fresh Vine. Most of your community will get a **portal account**. This only gives them access to use the [Community Portal](../../applications/portal/). There are access to manage for these accounts. They are restricted to content related to their person profile. What they can do in the portal depends on which modules are enabled by you. Users are able to sign up for a portal account on their own.  
   
+Creating Portal accounts is possible when the portal is enabled.  
+  
 ### Who can Create an Account  
+There are three possible ways to set the openness of your Community Portal. This is defined on the portal overview page and can be set as one of the following. These options are listed from most restrictive to most open.  
   
+*  **Invitations to those Visible on Portal Roster**: This uses the filtered list for the Portal Roster as a verification for who can register. 
+*  **Invitations to everyone In Fresh Vine**: As long as their email address is associated with a profile in Fresh Vine they can register
+*  **Open Registration to Anyone**: Anyone can create an account.
   
-### Creating an User Account  
+When deciding how open to make your organization you should consider how you plan on using the portal. It is possible to further restrict the Roster to keep that data more private. If you do choose to not have open registration then you will be limiting the people who can do the other great things the portal does.  
+  
+### Signing up for a  User Account  
+From the main login page, or from anywhere in the Portal a user will be able to sign up. The form is only 4 fields (First Name, Last Name, Email, and Password). When the email address is entered it is checked against your existing profiles in Fresh Vine. If a match is found the user will not be allowed to create an account directly, but instead will need to respond to an email invitation they can send to themselves. This ensures that people are not duplicated in your Fresh Vine - and ensures that when they do log in they have access to all their data.
+
+![Fresh Vine User Sign up Screen](/assets/images/users/signup-screen.png)  
+
+If a users email address is not already associated with a profile in your Fresh Vine they can create an account. If it is, then they will need to respond to an invite (see below).   
   
 ### Sending out Invites  
+Invitations can be sent in mass or individually. When you are doing the initial on boarding of Fresh Vine the mass invitation tool is helpful. Mass invitations can be sent from the Portal module in the leaders site. You do need access to manage user accounts to send out the invitations.
+
+The primary way that people will receive invitations is by requesting one be sent to them. You can just send your entire organization over to your Fresh Vine URL and they can then start the sign up process. If their email address is found to already be associated with a profile they will be prompted to receive an invitation. This is what the sign up form will look like for them.
   
+![Fresh Vine User Invite Screen](/assets/images/users/invite-screen.png)  
+  
+The invitation is a very simple email with a link inside. By receiving the email and clicking the link they have verified that they are the profile in question. This allows Fresh Vine to safely assume that the user in question is the person on the roster. When we create the account it will be associated with that your profile. This will allow them to see their data when they access the portal for the very first time.  
+  
+*If the email does not show* you should contact an administrator for your organization who can find the link you need on the 'User Account' page of your profile. Providing that link to them over email, or messaging will allow them to finalize their user account.  
+  
+Below is an example of what the form looks like that the invitation sends them to. It is simple and straight forward. All they need to do at this point is choose a password and they will be logged in to Fresh Vine.  
+  
+![Finalize Screen](/assets/images/users/finalize-screen.png)  
   
 ## Leader Accounts
 Think of a leader account as a user account with . Anyone who you need to do more gets a **leader account**. These accounts are also given access to the [Leaders site](../../applications/leaders/), and possibly the [Concierge](../../applications/concierge/) - if their permissions allow for it. Permissions must be set explicitly for each account. Leader accounts must be created/initiated by another Leader account with access to manage user accounts.  
@@ -38,8 +86,9 @@ Navigate to Admin - Users - View Users. This is a list of all the active and sus
     *  If they do not yet exist in your Fresh Vine roster, you can add them from here - simply type their full name and click "*Create: their name*" then enter their email address. 
 1.  Select whether you are giving them access to the Leaders Site (specific access will be chosen by you below), or the Portal.
 1.  If you are creating a Leader account, choose the access groups for this individual. This is your opportunity to make sure the right individuals are getting access to the right areas of your data. You're in charge of the permissions here. 
-1.  Once you click *Create User Account*, they will receive an email with a link. Clicking that link will let them choose a username, and password to use for Fresh Vine. It will also verify their email address. Their accounts will be pending until that process is completed.
+1.  Once you click *Create User Account*, they will receive an email with a link. Clicking that link will let them choose their password to use for Fresh Vine. It will also verify their email address. Their accounts will be pending until that process is completed.
 1.  *Tip*: You can create more than one User Account at a time - just click the *Add Another Person* button. This will allow you to give several individuals User Accounts at once. This can be particularly helpful when giving several group leaders access, for example. They will all have the same access to Fresh Vine, so why not do it all at once?
+1.  The form the user will fill out to select their password & log in is the same form as for the Portal accounts. However, when they submit the form they will be logged into the Leaders site instead of the portal.
 
 
 ### Controlling User Access  
@@ -90,7 +139,9 @@ Removing a User Account permanently deletes the User Account. It cannot be reins
 
 #### Why should each individual have their own User Account?  
 
-*  It is very important for each individual you give a User Account to, to have their own login. No need to create one for "Volunteers" that 10 people share. For security reasons, it is crucial that each person has their own account. 
+*  First of all, Fresh Vine does not charge you more if you have more user accounts. Secondly, by required each person to have their own account it allows you to better manage transitions in staff and volunteers. If you have a group of people sharing an account then you do not know who is actually access Fresh Vine and the data stored inside.
+
+   When someone leaves you can simply go into Fresh Vine and either suspend their account, or convert it to a Portal account (thus removing their leader access). Furthermore leader sessions are restricted to one active session at a time as a preventative security measure.
 
 #### How do Access Groups work?  
 
@@ -103,12 +154,12 @@ Removing a User Account permanently deletes the User Account. It cannot be reins
 
 #### What if someone with a User Account goes on sabbatical?  
 
-*  You can change an individual's User Account Status whenever needed. Navigate to Admin - Users - View Users. Find the individual who's status you need to change, and click Edit. Scroll down to *Account Status* - you can select Active, Suspended or Removed (See the descriptions of Account Status above).  
+*  You can change an individual's User Account Status whenever needed. Navigate to Admin - Users - View Users. Find the individual who's status you need to change, and click Edit. Scroll down to *Account Status* - you can select Active, Suspended or Removed (See the descriptions of [Account Status above](#account-status-levels)).  
 
 
 #### What if someone is abusing their access?  
 
-*  You can change an individual's User Account Status whenever needed. Navigate to Admin - Users - View Users. Find the individual who's status you need to change, and click Edit. Scroll down to *Account Status* - you can select Active, Suspended or Removed (See the descriptions of Account Status above).  
+*  You can change an individual's User Account Status whenever needed. Navigate to Admin - Users - View Users. Find the individual who's status you need to change, and click Edit. Scroll down to *Account Status* - you can select Active, Suspended or Removed (See the descriptions of [Account Status above](#account-status-levels)).  
 
 
 #### Can I edit existing Access Groups or add new ones?
