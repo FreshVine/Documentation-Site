@@ -11,6 +11,8 @@ The Fresh Vine Portal Site is meant as a supplement to the Leaders Site. The Por
 
 Portal accounts are different than Leader accounts. The login looks the same, but they won't see anything except the portal information when they log in (currently it's essentially a directory, though more features will be added in the future). They do need to log in, however. We've done this to keep your data secure.  
 
+{{{youtube "https://www.youtube.com/watch?v=LG7uaolr050&feature=youtu.be"}}}
+
 ## More Details
 
 *  Portal settings are set by Admins, and those settings are done in the Leaders Site.  
