@@ -1,3 +1,13 @@
+/*
+ * Generate the documentation website using the Metalsmith generator.
+ *
+ * Metalsmith reads all files in the source directory and passes an object of files through a set of plugins.
+ * Each key in the files object is a path and the value is an object with many properties.
+ * The contents properties has the contents of the file as a Buffer.
+ * The frontmatter (stuff between --- at the top of the file) is added as additional properties.
+ * When all the plugins are done running, the files object is written to the destination directory.
+ * That's it!
+ */
 'use strict';
 
 var Metalsmith = require('metalsmith');
@@ -190,7 +200,7 @@ exports.build = function(callback) {
 exports.server = function(callback) {
 	environment = 'development';
 	// environment = 'production';
-	exports.metalsmith().use(serve())
+	exports.metalsmith().use(serve({ host: "0.0.0.0", port: 8080, verbose: false }))
 	.use(msIf(
 		environment === 'development',
 		watch({

@@ -1,0 +1,27 @@
+version: '2.1'
+services:
+    web:
+        container_name: fv_docs
+        build: .
+        command: "npm start"
+        working_dir: /usr/src/app
+        expose:
+          - 8080
+        ports:
+            - "8090:8080"
+        volumes:
+#            - ./:/usr/src/app
+            - ./scripts:/usr/src/app/scripts
+            - ./src:/usr/src/app/src
+            - ./templates:/usr/src/app/templates
+            - ./test:/usr/src/app/test
+            - ./package.json:/usr/src/app/package.json
+            - ./redirects.json:/usr/src/app/redirects.json
+#            - ./docker/apache-vhosts.conf:/etc/apache2/sites-available/freshvine-vhosts.conf  # from http://www.selfsignedcertificate.com/
+        networks:
+            - default
+#            - active_container
+#networks:
+#    active_container:
+#        external:
+#          name: fvwebapp_freshvine_dev

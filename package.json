@@ -19,7 +19,7 @@
     "lodash": "^3.9.3",
     "lunr": "^0.5.11",
     "marked": "^0.3.3",
-    "metalsmith": "^1.7.0",
+    "metalsmith": "^2.3.0",
     "metalsmith-autotoc": "git://github.com/spark/metalsmith-autotoc",
     "metalsmith-clean-css": "^2.0.0",
     "metalsmith-collections": "git://github.com/spark/metalsmith-collections#dynamic-collections",
