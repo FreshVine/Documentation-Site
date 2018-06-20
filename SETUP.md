@@ -24,34 +24,52 @@ The virtual host will do two things for us.
   1.  It will use a proxy pass through to showcase the metalsmith site via HTTPS.  
 
 ```
+# Redirect all requests to SSL
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteCond %{HTTPS} !=on
+ RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L]
+</IfModule>
+
 <VirtualHost *:80>
-	ServerName docs.freshvine.co
-	ServerAlias docs.freshvine.co
-	Redirect "/" "https://docs.freshvine.co/"
+  # General
+  ServerAdmin contact@nineteen05.com
+  # DocumentRoot /var/www/html/build
+  ServerName docs.freshvine.co
+  ServerAlias www.docs.freshvine.co
+  Options -Indexes
+  Redirect "/" "https://docs.freshvine.co/"
+
+  # Logging
+  ErrorLog logs/freshvine.co-error_log
+  CustomLog logs/freshvine.co-access_log common
 </VirtualHost>
 
 <VirtualHost *:443>
-	SSLEngine on
-	SSLCertificateFile /etc/certs/CERTIFICATE.crt
-	SSLCertificateKeyFile /etc/certs/CERTIFICATE.key
-	SSLCertificateChainFile /etc/certs/KEYCHAIN-FILE.ca.crt
+  SSLEngine on
+  SSLCertificateFile /etc/letsencrypt/live/docs.freshvine.co/cert.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/docs.freshvine.co/privkey.pem
+  SSLCertificateChainFile /etc/letsencrypt/live/docs.freshvine.co/chain.pem
+  SSLProtocol All -SSLv2 -SSLv3
+  SSLHonorCipherOrder on
+  SSLCipherSuite "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA !RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS"
 
-	ServerAdmin contact@domain.com
-	ServerName docs.freshvine.co
-	ServerAlias docs.freshvine.co
 
-	ProxyPreserveHost On
-	ProxyRequests off
+  ServerAdmin contact@nineteen05.com
+  ServerName docs.freshvine.co
+  # ServerAlias docs.freshvine.co
 
-	<Proxy *>
-		Order deny,allow
-		Allow from all
-	</Proxy>
+  ProxyPreserveHost On
 
-	<Location />
-		ProxyPass http://localhost:8080/
-		ProxyPassReverse http://localhost:8080/
-	</Location>
+  <Proxy *>
+    Order deny,allow
+    Allow from all
+  </Proxy>
+
+  <Location />
+    ProxyPass http://localhost:8080/
+    ProxyPassReverse http://localhost:8080/
+  </Location>
 </VirtualHost>
 ```
 
@@ -114,3 +132,29 @@ When in testing/development you are likely running `npm start` to get node off t
 If/When you need to get a clean build and need to restart it you can use the line below. Will work from any directory.
 
 	forever restartall
+	
+	
+## Using Let's Encrypt for SSL Certificates
+
+[Let's Encrypt](https://certbot.eff.org/) offers free 90 day SSL certificates. These are not secure as the ones we purchase since those have a level of verification (that we are actually Fresh Vine) whereas these only verify that you control the domain.
+
+The EFF provides a great little bot to do the registration for certificates. To install it do the following (we did it in `/var/www/`).
+
+	wget https://dl.eff.org/certbot-auto
+	chmod a+x certbot-auto
+
+Now - while the node server and apache are running - you can execute the following and it will get certificates.
+
+	cd /var/www/
+	sudo ./certbot-auto certonly --webroot -w /var/www/html/build -d docs.freshvine.co
+
+### Renewing those Certs 
+That is great but these only last 90 days. So we need to [automate the renewal process](https://certbot.eff.org/docs/using.html#renewing-certificates). Here comes cron
+
+	sudo crontab -l		# This will show you want jobs are scheduled for root
+
+	sudo crontab -e		# Allow you to add & edit jobs
+
+Once in the crontab editor you can add the following job. The renew action will only renew when needed, and the `deloy-hook` will execute the following script whenever a certificate is updated.
+	
+	34 3,15 * * * /var/www/certbot-auto renew --deploy-hook "/sbin/service httpd restart"
