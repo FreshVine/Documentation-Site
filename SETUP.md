@@ -157,4 +157,4 @@ That is great but these only last 90 days. So we need to [automate the renewal p
 
 Once in the crontab editor you can add the following job. The renew action will only renew when needed, and the `deloy-hook` will execute the following script whenever a certificate is updated.
 	
-	34 3,15 * * * /var/www/certbot-auto renew --deploy-hook "/sbin/service httpd restart"
+	34	3,15	*	*	*	/var/www/certbot-auto renew --deploy-hook "/sbin/service httpd restart"
